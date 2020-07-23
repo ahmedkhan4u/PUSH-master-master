@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Push"
+        android:icon="@drawable/ic_push"
+        android:id="@+id/nav1"
+        />
+
+    <item android:title="Pedometer"
+        android:icon="@drawable/ic_pedometer"
+        android:id="@+id/nav2"
+        />
+
+    <item android:title="Camera"
+        android:icon="@drawable/ic_camera"
+        android:id="@+id/nav3"
+        />
+
+    <item android:title="Mind"
+        android:icon="@drawable/ic_icon_fitmind"
+        android:id="@+id/nav4"
+        />
+    <item android:title="Body"
+        android:icon="@drawable/ic_icon_fitbody"
+        android:id="@+id/nav5"
+        />
+
+</menu>

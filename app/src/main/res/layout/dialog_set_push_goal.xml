@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="Set Push Goal"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corners_bg_light"
+        android:padding="10dp"
+        android:layout_marginTop="24dp"
+        android:hint="Enter goal details here"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:id="@+id/edt_dialog_fitmind_goal"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_corners_bg_light"
+        android:padding="10dp"
+        android:hint="Choose Date"
+        android:drawableRight="@drawable/ic_date"
+        android:id="@+id/txt_dialog_fitmind_goal_date"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:weightSum="2"
+        android:padding="4dp"
+        >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:background="@drawable/round_corners_bg_light"
+            android:textColor="@android:color/black"
+            android:layout_marginRight="8dp"
+            android:id="@+id/btn_cancel_dialog_fitmind"
+            />
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_dark_round_corners"
+            android:textColor="@android:color/white"
+            android:id="@+id/btn_submit_dialog_fitmind"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

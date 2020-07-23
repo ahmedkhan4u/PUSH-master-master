@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <com.push.sweateliteathletics.softrasol.FontTextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/Data"
+            android:textColor="@color/fontcolorr"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/layDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/User_data"
+                android:textStyle="bold" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView30"
+                android:text="@string/Change_your_personal_data" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_marginTop="30dp"
+            android:background="@color/fontcolorr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <com.push.sweateliteathletics.softrasol.FontTextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:text="@string/Screen"
+            android:textColor="@color/fontcolorr"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/layKeepScreenOn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/keep_screen_on_title"
+                android:textStyle="bold" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView34"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/screenOnSwitch"
+                android:text="@string/keep_screen_on" />
+
+            <Switch
+                android:id="@+id/screenOnSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_marginTop="30dp"
+            android:background="@color/fontcolorr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <com.push.sweateliteathletics.softrasol.FontTextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+             android:text="@string/Map"
+            android:textColor="@color/fontcolorr"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/layMapType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/map_type_title"
+                android:textStyle="bold" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView37"
+                android:text="@string/map_type" />
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="30dp"
+            android:background="@color/fontcolorr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <com.push.sweateliteathletics.softrasol.FontTextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+             android:text="@string/dateTitle"
+            android:textColor="@color/fontcolorr"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/layDateFormat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/dateTitle"
+                android:textStyle="bold" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView40"
+                android:text="@string/dateText" />
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="30dp"
+            android:background="@color/fontcolorr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <com.push.sweateliteathletics.softrasol.FontTextView
+            android:id="@+id/textView42"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+             android:text="@string/Daily_goal"
+            android:textColor="@color/fontcolorr"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/layGoalDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/Daily_goal_distance"
+                android:textStyle="bold" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView43"
+                android:text="@string/Set_the_distance_goal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/settingsSplitter" />
+
+        <RelativeLayout
+            android:id="@+id/layGoalCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/Daily_goal_calories"
+                android:textStyle="bold" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView45"
+                android:text="@string/Set_the_calories_goal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/settingsSplitter" />
+
+        <RelativeLayout
+            android:id="@+id/layGoalDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/Daily_goal_time_min"
+                android:textStyle="bold" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView47"
+                android:text="@string/Set_the_time_goal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/settingsSplitter" />
+
+        <RelativeLayout
+            android:id="@+id/layGoalNotif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView49"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/Notification"
+                android:textStyle="bold" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView49"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/goalNotifSwitch"
+                android:text="@string/Get_sound_notification" />
+
+            <Switch
+                android:id="@+id/goalNotifSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_marginTop="30dp"
+            android:background="@color/fontcolorr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <com.push.sweateliteathletics.softrasol.FontTextView
+            android:id="@+id/textView51"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+             android:text="@string/Units"
+            android:textColor="@color/fontcolorr"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/layUnits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/Units"
+                android:textStyle="bold" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView52"
+                android:text="@string/Choose_unit" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_marginTop="30dp"
+            android:background="@color/fontcolorr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <com.push.sweateliteathletics.softrasol.FontTextView
+            android:id="@+id/textView54"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+             android:text="@string/Voice_notification"
+            android:textColor="@color/fontcolorr"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/layVoiceNotif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/Voice_notification"
+                android:textStyle="bold" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView56"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView55"
+                android:text="@string/Voice_notification_summ" />
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="30dp"
+            android:background="@color/fontcolorr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <com.push.sweateliteathletics.softrasol.FontTextView
+            android:id="@+id/textView61"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+             android:text="@string/AutoPause"
+            android:textColor="@color/fontcolorr"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/layAutoPause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/auto_pause_title"
+                android:textStyle="bold" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView62"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/autoPauseSwitch"
+                android:text="@string/auto_pause_summ" />
+
+            <Switch
+                android:id="@+id/autoPauseSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/settingsSplitter" />
+
+
+
+
+     </LinearLayout>
+</ScrollView>

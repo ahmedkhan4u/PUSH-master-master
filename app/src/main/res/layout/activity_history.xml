@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linLayHistory"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <com.push.sweateliteathletics.softrasol.TitileTextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="3dp"
+            android:text="@string/history"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerInside">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relLayHis1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black"
+                android:longClickable="true">
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/dateTv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/startTimeTv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTv1"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/paceTv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/startTimeTv1"
+                    android:layout_alignBottom="@+id/startTimeTv1"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/distanceTv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dateTv1"
+                    android:layout_alignBottom="@+id/dateTv1"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <Chronometer
+                    android:id="@+id/cTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/distanceTv1"
+                    android:layout_alignBottom="@+id/distanceTv1"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/caloriesTv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/paceTv1"
+                    android:layout_alignBottom="@+id/paceTv1"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayHis2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black"
+                android:longClickable="true">
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/dateTv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/startTimeTv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTv2"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/paceTv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/startTimeTv2"
+                    android:layout_alignBottom="@+id/startTimeTv2"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/distanceTv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dateTv2"
+                    android:layout_alignBottom="@+id/dateTv2"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <Chronometer
+                    android:id="@+id/cTime2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/distanceTv2"
+                    android:layout_alignBottom="@+id/distanceTv2"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/caloriesTv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/paceTv2"
+                    android:layout_alignBottom="@+id/paceTv2"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayHis3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black"
+                android:longClickable="true">
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/dateTv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/startTimeTv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTv3"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/paceTv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/startTimeTv3"
+                    android:layout_alignBottom="@+id/startTimeTv3"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/distanceTv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dateTv3"
+                    android:layout_alignBottom="@+id/dateTv3"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <Chronometer
+                    android:id="@+id/cTime3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/distanceTv3"
+                    android:layout_alignBottom="@+id/distanceTv3"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/caloriesTv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/paceTv3"
+                    android:layout_alignBottom="@+id/paceTv3"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayHis4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black"
+                android:longClickable="true">
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/dateTv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/startTimeTv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTv4"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/paceTv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/startTimeTv4"
+                    android:layout_alignBottom="@+id/startTimeTv4"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/distanceTv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dateTv4"
+                    android:layout_alignBottom="@+id/dateTv4"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <Chronometer
+                    android:id="@+id/cTime4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/distanceTv4"
+                    android:layout_alignBottom="@+id/distanceTv4"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/caloriesTv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/paceTv4"
+                    android:layout_alignBottom="@+id/paceTv4"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayHis5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black"
+                android:longClickable="true">
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/dateTv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/startTimeTv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTv5"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/paceTv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/startTimeTv5"
+                    android:layout_alignBottom="@+id/startTimeTv5"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/distanceTv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dateTv5"
+                    android:layout_alignBottom="@+id/dateTv5"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <Chronometer
+                    android:id="@+id/cTime5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/distanceTv5"
+                    android:layout_alignBottom="@+id/distanceTv5"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/caloriesTv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/paceTv5"
+                    android:layout_alignBottom="@+id/paceTv5"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayHis6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black"
+                android:longClickable="true">
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/dateTv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/startTimeTv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTv6"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/paceTv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/startTimeTv6"
+                    android:layout_alignBottom="@+id/startTimeTv6"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/distanceTv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dateTv6"
+                    android:layout_alignBottom="@+id/dateTv6"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <Chronometer
+                    android:id="@+id/cTime6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/distanceTv6"
+                    android:layout_alignBottom="@+id/distanceTv6"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/caloriesTv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/paceTv6"
+                    android:layout_alignBottom="@+id/paceTv6"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayHis7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black"
+                android:longClickable="true">
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/dateTv7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/startTimeTv7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTv7"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/paceTv7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/startTimeTv7"
+                    android:layout_alignBottom="@+id/startTimeTv7"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/distanceTv7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dateTv7"
+                    android:layout_alignBottom="@+id/dateTv7"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <Chronometer
+                    android:id="@+id/cTime7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/distanceTv7"
+                    android:layout_alignBottom="@+id/distanceTv7"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/caloriesTv7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/paceTv7"
+                    android:layout_alignBottom="@+id/paceTv7"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayHis8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black"
+                android:longClickable="true">
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/dateTv8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/startTimeTv8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTv8"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/paceTv8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/startTimeTv8"
+                    android:layout_alignBottom="@+id/startTimeTv8"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/distanceTv8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dateTv8"
+                    android:layout_alignBottom="@+id/dateTv8"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <Chronometer
+                    android:id="@+id/cTime8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/distanceTv8"
+                    android:layout_alignBottom="@+id/distanceTv8"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/caloriesTv8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/paceTv8"
+                    android:layout_alignBottom="@+id/paceTv8"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayHis9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/black"
+                android:longClickable="true">
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/dateTv9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/startTimeTv9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTv9"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/paceTv9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/startTimeTv9"
+                    android:layout_alignBottom="@+id/startTimeTv9"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/distanceTv9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dateTv9"
+                    android:layout_alignBottom="@+id/dateTv9"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <Chronometer
+                    android:id="@+id/cTime9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/distanceTv9"
+                    android:layout_alignBottom="@+id/distanceTv9"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/caloriesTv9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/paceTv9"
+                    android:layout_alignBottom="@+id/paceTv9"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayHis10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:longClickable="true">
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/dateTv10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/startTimeTv10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTv10"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/paceTv10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/startTimeTv10"
+                    android:layout_alignBottom="@+id/startTimeTv10"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/distanceTv10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/dateTv10"
+                    android:layout_alignBottom="@+id/dateTv10"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <Chronometer
+                    android:id="@+id/cTime10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/distanceTv10"
+                    android:layout_alignBottom="@+id/distanceTv10"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/caloriesTv10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/paceTv10"
+                    android:layout_alignBottom="@+id/paceTv10"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/whitefontcolorr" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

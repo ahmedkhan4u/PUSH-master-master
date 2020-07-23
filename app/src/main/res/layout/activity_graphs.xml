@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relLayFirst"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.push.sweateliteathletics.softrasol.FontTextView
+        android:id="@+id/tvAdvGraphTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/btnAdvanced"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/moredata" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/imbAdvancedDistance"
+        android:layout_below="@+id/btnAdvanced"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:scaleType="centerInside" />
+
+    <ImageButton
+        android:id="@+id/imbAdvancedCalories"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignTop="@+id/imbAdvancedDistance"
+        android:layout_toLeftOf="@+id/imbAdvancedDistance"
+        android:background="@drawable/cal1" />
+
+    <ImageButton
+        android:id="@+id/imbAdvancedDistance"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/distanc1"
+        android:scaleType="centerInside" />
+
+    <ImageButton
+        android:id="@+id/imbAdvancedDuration"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignTop="@+id/imbAdvancedDistance"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/imbAdvancedDistance"
+        android:background="@drawable/time1"
+        android:scaleType="centerInside" />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_dots_light"
+        android:drawablePadding="10dp"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="Instructions"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/radomir_tinkov_gilroy_bold"
+        android:id="@+id/points_title"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:text="Lorem ipsum is a dummy text"
+        android:layout_marginLeft="28dp"
+        android:textColor="@color/white"
+        android:id="@+id/points_body"
+        android:fontFamily="@font/radomir_tinkov_gilroy_medium"
+        />
+
+</LinearLayout>

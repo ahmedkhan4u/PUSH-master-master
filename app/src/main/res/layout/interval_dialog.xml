@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+
+    <com.push.sweateliteathletics.softrasol.FontTextView
+        android:id="@+id/tvTitle"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/chooseInterval"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="15dp">
+
+        <NumberPicker
+            android:id="@+id/npInterval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:solidColor="@color/whitefontcolorr"
+            android:descendantFocusability="blocksDescendants" />
+
+        <com.push.sweateliteathletics.softrasol.FontTextView
+            android:id="@+id/tvDialogUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/npInterval"
+            android:text="@string/km"
+            android:textSize="17dp" />
+    </RelativeLayout>
+</RelativeLayout>

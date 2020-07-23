@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".QuoreReport"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/whitefontcolorr" />
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:layout_height="match_parent"
+       >
+
+       <LinearLayout
+           android:id="@+id/LayReport1"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1.0"
+           android:layout_marginBottom="5dp"
+           android:background="@color/black"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:orientation="vertical"
+               android:paddingTop="5dp">
+
+               <com.push.sweateliteathletics.softrasol.FontTextView
+                   android:id="@+id/tvDurationTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="#000000"
+                   android:textSize="15dp" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="8dp"
+               android:orientation="vertical">
+
+               <RelativeLayout
+                   android:id="@+id/relMap"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1.0">
+
+                   <fragment
+                       android:id="@+id/mapRep"
+                       android:name="com.google.android.gms.maps.SupportMapFragment"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent" />
+
+                   <ImageButton
+                       android:id="@+id/imbZoom"
+                       android:layout_width="60dp"
+                       android:layout_height="60dp"
+                       android:layout_alignParentBottom="true"
+                       android:layout_alignParentRight="true"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginRight="10dp"
+                       android:elevation="4dp"
+                       android:background="@drawable/ic_zoom_in"
+                       android:padding="5dp" />
+               </RelativeLayout>
+
+               <LinearLayout
+                   android:id="@+id/LinSpeed"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="4.0"
+                   android:background="@color/black"
+                   android:orientation="vertical">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="15dp"
+                       android:layout_weight="1.0"
+                       android:gravity="center"
+                       android:orientation="horizontal">
+
+                       <com.push.sweateliteathletics.softrasol.FontTextView
+                           android:id="@+id/tvLowSpeed"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/speed_lower_than_10_kph"
+                           android:textColor="#ffffff" />
+
+                       <com.push.sweateliteathletics.softrasol.FontTextView
+                           android:id="@+id/tvLowSpeedProc"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginRight="10dp"
+                           android:gravity="center"
+                           android:textColor="#ffffff" />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="15dp"
+                       android:layout_weight="1.0"
+                       android:gravity="center"
+                       android:orientation="horizontal">
+
+                       <com.push.sweateliteathletics.softrasol.FontTextView
+                           android:id="@+id/tvMediumSpeed"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/speed_between_10_kph_and_25_kph"
+                           android:textColor="#ffffff" />
+
+                       <com.push.sweateliteathletics.softrasol.FontTextView
+                           android:id="@+id/tvMediumSpeedProc"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginRight="10dp"
+                           android:gravity="center"
+                           android:textColor="#ffffff" />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="15dp"
+                       android:layout_weight="1.0"
+                       android:gravity="center"
+                       android:orientation="horizontal">
+
+                       <com.push.sweateliteathletics.softrasol.FontTextView
+                           android:id="@+id/tvHighSpeed"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="@string/speed_higher_than_25_kph"
+                           android:textColor="#ffffff" />
+
+                       <com.push.sweateliteathletics.softrasol.FontTextView
+                           android:id="@+id/tvHighSpeedProc"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginRight="10dp"
+                           android:gravity="center"
+                           android:textColor="#ffffff" />
+                   </LinearLayout>
+               </LinearLayout>
+           </LinearLayout>
+       </LinearLayout>
+
+       <View
+           android:background="@color/white"
+           android:layout_width="match_parent"
+           android:layout_height="1dp"/>
+
+       <LinearLayout
+           android:id="@+id/LayReport2"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="1.8"
+           android:orientation="vertical"
+           android:paddingBottom="6dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="6dp"
+               android:layout_weight="1.0">
+
+               <com.push.sweateliteathletics.softrasol.FontTextView
+                   android:id="@+id/textView3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:text="@string/DURATION"
+                   android:textColor="#ffffff" />
+
+               <Chronometer
+                   android:id="@+id/chronoReport"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:textColor="#ffffff" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="6dp"
+               android:layout_weight="1.0">
+
+               <com.push.sweateliteathletics.softrasol.FontTextView
+                   android:id="@+id/textView8"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:text="@string/DISTANCE"
+                   android:textColor="#ffffff" />
+
+               <com.push.sweateliteathletics.softrasol.FontTextView
+                   android:id="@+id/tvDistance"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:textColor="#ffffff" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="6dp"
+               android:layout_weight="1.0">
+
+               <com.push.sweateliteathletics.softrasol.FontTextView
+                   android:id="@+id/textView9"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:text="@string/CALORIES"
+                   android:textColor="#ffffff" />
+
+               <com.push.sweateliteathletics.softrasol.FontTextView
+                   android:id="@+id/tvCalories"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:textColor="#ffffff" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="6dp"
+               android:layout_weight="1.0">
+
+               <com.push.sweateliteathletics.softrasol.FontTextView
+                   android:id="@+id/com.example.enix_mayur.fitneess.FontTextView10"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:text="@string/AVG_SPEED"
+                   android:textColor="#ffffff" />
+
+               <com.push.sweateliteathletics.softrasol.FontTextView
+                   android:id="@+id/tvAvgSpeed"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:textColor="#ffffff" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="6dp"
+               android:layout_weight="1.0">
+
+               <com.push.sweateliteathletics.softrasol.FontTextView
+                   android:id="@+id/textView11"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:text="@string/MAX_SPEED"
+                   android:textColor="#ffffff" />
+
+               <com.push.sweateliteathletics.softrasol.FontTextView
+                   android:id="@+id/tvMaxSpeed"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:textColor="#ffffff" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginTop="6dp"
+               android:layout_weight="1.0">
+
+               <com.push.sweateliteathletics.softrasol.FontTextView
+                   android:id="@+id/textView13"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:text="@string/AVG_PACE"
+                   android:textColor="#ffffff" />
+
+               <com.push.sweateliteathletics.softrasol.FontTextView
+                   android:id="@+id/tvPace"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:textColor="#ffffff" />
+           </LinearLayout>
+       </LinearLayout>
+
+
+       <RelativeLayout
+           android:id="@+id/bnr"
+           android:gravity="center"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true" />
+
+
+   </LinearLayout>
+</LinearLayout>

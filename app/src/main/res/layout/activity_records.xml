@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LayRecord"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.push.sweateliteathletics.softrasol.TitileTextView
+            android:id="@+id/textView1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="3dp"
+            android:text="@string/Records"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/LayRecord2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/recordpatti">
+
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:id="@+id/ivRecordDuration"
+                android:layout_width="@dimen/iconsize"
+                android:layout_height="@dimen/iconsize"
+                android:layout_gravity="center"
+                android:src="@drawable/time" />
+
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/Duration"
+                    android:textColor="@color/dark_black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <Chronometer
+                    android:id="@+id/chronoRec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/dark_black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LayRecord3"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/recordpatti">
+
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:id="@+id/ivRecordDistance"
+                android:layout_width="@dimen/iconsize"
+                android:layout_height="@dimen/iconsize"
+                android:layout_gravity="center"
+
+                android:src="@drawable/distance" />
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/Distance"
+                    android:textColor="@color/dark_black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/tvRecordDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/dark_black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LayRecord4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/recordpatti">
+
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:id="@+id/ivRecordSpeed"
+                android:layout_width="@dimen/iconsize"
+                android:layout_height="@dimen/iconsize"
+                android:layout_gravity="center"
+
+                android:src="@drawable/speed" />
+
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/Speed"
+                    android:textColor="@color/dark_black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/tvRecordSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/dark_black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/LayRecord5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/recordpatti">
+
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:id="@+id/ivRecordPace"
+                android:layout_width="@dimen/iconsize"
+                android:layout_height="@dimen/iconsize"
+                android:layout_gravity="center"
+                android:src="@drawable/time" />
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                 android:text="@string/Pace"
+                android:textStyle="bold"
+                android:textColor="@color/dark_black"
+                android:textSize="25sp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:textStyle="bold"
+                android:id="@+id/tvRecordPace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/dark_black"
+                android:textSize="25sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LayRecord7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/recordpatti">
+
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:id="@+id/ivRecordCalories"
+                android:layout_width="@dimen/iconsize"
+                android:layout_height="@dimen/iconsize"
+                android:layout_gravity="center"
+                android:src="@drawable/calories" />
+
+            <LinearLayout
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:text="@string/Calories"
+                android:textStyle="bold"
+                android:textColor="@color/dark_black"
+                android:textSize="25sp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:textStyle="bold"
+                android:id="@+id/tvRecordCalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/dark_black"
+                android:textSize="25sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

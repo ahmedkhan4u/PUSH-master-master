@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/textView5"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.push.sweateliteathletics.softrasol.FontTextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:text="@string/BMI_calculator"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/secondalphaback"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:scaleType="centerInside">
+
+                    <com.push.sweateliteathletics.softrasol.FontTextView
+                        android:id="@+id/tvHeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="30dp"
+                        android:text="@string/Height"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/etHeightBMI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/edittext_rounded_corners"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone">
+
+                        <requestFocus />
+                    </EditText>
+
+                    <Spinner
+                        android:id="@+id/spHeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/secondalphaback"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:scaleType="centerInside">
+
+                    <com.push.sweateliteathletics.softrasol.FontTextView
+                        android:id="@+id/tvWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="30dp"
+                        android:text="@string/Weight"
+                        android:textColor="#ffffff" />
+
+                    <EditText
+                        android:id="@+id/etWeightBMI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/edittext_rounded_corners"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:imeOptions="actionGo|actionSearch|actionSend|actionNext|actionDone|actionPrevious"
+                        android:inputType="number|numberSigned|numberDecimal|numberPassword|phone" />
+
+                    <Spinner
+                        android:id="@+id/spWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnCalculate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="100dp"
+                    android:textSize="22sp"
+                    android:textAllCaps="false"
+                    android:text="Calculate"
+                    android:background="@drawable/lets_work_btn_bg" />
+
+                <com.push.sweateliteathletics.softrasol.FontTextView
+                    android:id="@+id/tvBMI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="BMI = - -"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.push.sweateliteathletics.softrasol.FontTextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView1"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_marginBottom="7dp"
+        android:text="@string/Overweight"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/white" />
+
+    <com.push.sweateliteathletics.softrasol.FontTextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView3"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_marginBottom="7dp"
+        android:text="@string/Normal_weight"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/white" />
+
+    <com.push.sweateliteathletics.softrasol.FontTextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_marginBottom="7dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/Underweight"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/white" />
+
+    <com.push.sweateliteathletics.softrasol.FontTextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/Obesity"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/white" />
+
+    <com.push.sweateliteathletics.softrasol.FontTextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="29.9"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/white" />
+
+    <com.push.sweateliteathletics.softrasol.FontTextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignRight="@+id/textView6"
+        android:text="25 - 29.9"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/white" />
+
+    <com.push.sweateliteathletics.softrasol.FontTextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignRight="@+id/textView7"
+        android:text="18.5 - 24.9"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/white" />
+
+    <com.push.sweateliteathletics.softrasol.FontTextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignRight="@+id/textView8"
+        android:text="18.5"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/white" />
+</RelativeLayout>

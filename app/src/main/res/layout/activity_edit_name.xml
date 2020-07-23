@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyActivities.EditNameActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/push_bg"
+        android:scaleType="fitXY"
+        android:id="@+id/bg_image"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_centerInParent="true"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello, What's \nyour profile name?"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/txt_title"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/radomir_tinkov_gilroy_bold"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_title"
+                android:layout_marginTop="24dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/edt_bg"
+                android:hint="Type your name..."
+                android:padding="10dp"
+                android:inputType="textPersonName"
+                android:id="@+id/edt_person_name_edit"
+                android:textSize="14sp"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_white_bg"
+                android:layout_marginTop="24dp"
+                android:onClick="ButtonEditClick"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

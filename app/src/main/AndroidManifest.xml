@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.push.sweateliteathletics.softrasol">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <!-- permission required to automatically restart a repeating alarm if the user reboots the device -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:name=".QuoreApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:hardwareAccelerated="false"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MyActivities.EditNameActivity" />
+        <activity android:name=".MyActivities.FitMindProgramsActivity" />
+        <activity android:name=".MyActivities.FitBodyProgramsActivity" />
+        <activity android:name=".MyActivities.MeditationCategoryActivity" />
+        <activity android:name=".MyActivities.ChallengesActivity" />
+        <activity android:name=".MyActivities.MobilityActivity" />
+        <activity android:name=".MyActivities.ExerciseActivity" />
+        <activity android:name=".MyActivities.MotivationActivity" />
+        <activity android:name=".MyActivities.MeditationActivity" />
+        <activity android:name=".MyActivities.MindsetActivity" />
+        <activity android:name=".MyActivities.BreathworkActivity" />
+        <activity android:name=".MyActivities.MyProgramsActivity" />
+        <activity android:name=".MyActivities.NameSettingActivity" />
+        <activity android:name=".OnBoardingScreens.OnBoardingActivity"/>
+        <activity android:name=".MyActivities.NutritionActivity"/>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignIn" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".VideoPreviewActivity" />
+        <activity android:name=".PicturePreviewActivity" />
+        <activity android:name=".Main2Activity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ads_id" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyARs8o9ep85V3BHbaDTaW6435WBt09qCj4" />
+
+        <activity
+            android:name=".QuoreMain"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustNothing" />
+        <activity
+            android:name=".QuoreSplash"
+            android:screenOrientation="portrait" /> <!-- <meta-data android:name="com.google.android.maps.v2.API_KEY" -->
+        <!-- android:value="AIzaSyCv0EKZ7WxirSW0V-lrUI6zKt-8hl5QwRU" /> -->
+        <activity
+            android:name=".QuoreStart1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QuoreStart2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QuoreSettings"
+            android:parentActivityName=".QuoreMain"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".QuoreRecords"
+            android:parentActivityName=".QuoreMain"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".QuoreChangeData"
+            android:parentActivityName=".QuoreMain"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".QuoreReport"
+            android:parentActivityName=".QuoreMain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QuoreAdvancedGraphs"
+            android:parentActivityName=".QuoreMain"
+            android:screenOrientation="landscape" />
+
+        <service
+            android:name=".GPSService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".QuoreShare"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QuoreAppSettings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SpeakOption"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".BroadcastService"
+            android:exported="true"
+            android:process=":ServiceProcess"
+            android:enabled="true"
+            />
+        <receiver
+            android:name=".services.Alarm60min"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver android:name=".services.AutostartReciver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".services.Mt60minService"
+            android:enabled="true" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <!-- Register the Alarm Receiver -->
+        <receiver android:name=".services.AlarmReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

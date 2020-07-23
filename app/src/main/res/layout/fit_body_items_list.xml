@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="16dp"
+    app:cardCornerRadius="9dp"
+    app:cardElevation="4dp"
+    android:background="@drawable/round_corners_bg"
+    android:layout_marginTop="16dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/meditatoin_bg"
+        >
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_dummy_program"
+            android:id="@+id/img_programs"
+            android:background="@drawable/round_corners_bg"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#5B000000"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:padding="12dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="BreathWork"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:id="@+id/txt_title_body_list"
+                android:textSize="22sp"
+                android:fontFamily="@font/radomir_tinkov_gilroy_bold"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 weeks workout"
+                android:layout_marginTop="8dp"
+                android:textAllCaps="false"
+                android:textColor="#D6D6D6"
+                android:id="@+id/txt_subtitle_body_list"
+                android:fontFamily="@font/radomir_tinkov_gilroy_medium"
+                />
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/ic_lock"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:visibility="gone"
+            android:id="@+id/btn_lock"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

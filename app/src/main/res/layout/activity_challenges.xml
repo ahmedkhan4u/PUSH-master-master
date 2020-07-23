@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/distance" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Run_total_20_km"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges2"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/distance" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Run_total_200_km"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges4"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges5"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/distance" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Run_total_1000_km"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges6"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges7"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/distance" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Run_total_5000_km"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges7"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges8"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges31"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/distance" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Run_total_10000_km"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges31"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges32"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges32"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges9"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/time" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Run_total_500_min"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges9"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges10"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges11"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/time" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Run_total_1k_min"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges11"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges12"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges13"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/time" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Run_total_5k_min"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges13"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges14"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges14"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges15"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/time" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Run_total_10k_min"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges15"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges16"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges16"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges33"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/time" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Run_total_50k_min"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges33"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges34"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges34"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges17"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/speed" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Reach_a_speed_of_20_kph"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges17"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges18"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges18"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges19"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/speed" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Reach_a_speed_of_30_kph"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges19"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges20"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges20"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges21"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/calories" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Spend_total_3k_kcal"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges21"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges22"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges22"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges23"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/calories" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Spend_total_5k_kcal"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges23"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges24"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges24"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges25"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/calories" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Spend_total_10k_kcal"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges25"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges26"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges26"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges27"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/calories" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Spend_total_20k_kcal"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges27"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges28"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges28"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/LayChallenges15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/ivChallenges29"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/calories" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="55dp"
+                android:gravity="center"
+                android:text="@string/Spend_total_50k_kcal"
+                android:textColor="@color/dark_black"
+                android:textSize="16dp" />
+
+            <com.push.sweateliteathletics.softrasol.FontTextView
+                android:id="@+id/tvChallenges30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges29"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/dark_black"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/ivChallenges30"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/challenges_close_btn" />
+
+            <ProgressBar
+                android:id="@+id/pbChallenges15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvChallenges30"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

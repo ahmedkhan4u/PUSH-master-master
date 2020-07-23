@@ -1,0 +1,120 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.6, 0.99.99]'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.push.sweateliteathletics.softrasol"
+
+        manifestPlaceholders = [
+                onesignal_app_id               : 'a4f513c9-806e-47a2-800b-867998276fa8',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
+
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    configurations {
+        all*.exclude module: 'servlet-api'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    implementation 'com.google.firebase:firebase-firestore:17.1.2'
+    implementation 'com.google.firebase:firebase-storage:16.0.4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.facebook.android:audience-network-sdk:5.0.0'
+    implementation 'com.google.android.gms:play-services-ads:15.0.1'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    implementation 'androidx.core:core:1.0.0'
+    //Google SignIn
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+
+    //camera
+    api 'com.otaliastudios:cameraview:2.6.0'
+    implementation 'com.huangyz0918:androidwm-light:0.1.2'
+
+    //camerabutton
+    implementation 'com.github.iammert:CameraVideoButton:0.2'
+
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    //One Signal
+    implementation 'com.onesignal:OneSignal:[3.13.0, 3.99.99]'
+
+    //Picasso Library
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //universal video view
+    implementation 'com.linsea:universalvideoview:1.1.0@aar'
+    implementation 'com.crust87:video-crop-view:1.4.0'
+
+}
+repositories {
+    mavenCentral()
+}

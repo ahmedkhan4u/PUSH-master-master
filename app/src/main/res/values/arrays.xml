@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="Gender">
+        <item>Male</item>
+        <item>Female</item>
+    </array>
+    <array name="Height">
+        <item>cm</item>
+        <item>inch</item>
+    </array>
+    <array name="Weight">
+        <item>kg</item>
+        <item>lb</item>
+    </array>
+    <array name="dateFormat">
+        <item>System default</item>
+        <item>dd/MM/yy</item>
+        <item>MM/dd/yy</item>
+        <item>yy/MM/dd</item>
+    </array>
+    <array name="dateFormatValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </array>
+    <array name="intervalType">
+        <item>Time based</item>
+        <item>Distance Based</item>
+    </array>
+    <array name="intervalTypeValues">
+        <item>1</item>
+        <item>2</item>
+    </array>
+    <array name="mapType">
+        <item>Normal</item>
+        <item>Satellite</item>
+        <item>Terrain</item>
+    </array>
+    <array name="mapTypeValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </array>
+    <array name="nav_drawer_labels">
+        <item>@string/nav_item_glavna</item>
+        <item>@string/nav_item_statistics</item>
+        <item>@string/nav_item_challenges</item>
+        <item>@string/nav_item_records</item>
+        <item>@string/nav_item_history</item>
+        <item>@string/overall</item>
+        <item>@string/nav_item_bmi</item>
+        <item>@string/nav_item_settings</item>
+    </array>
+    <array name="unitValues">
+        <item>Metric</item>
+        <item>Imperial</item>
+    </array>
+    <array name="units">
+        <item>Metric (km)</item>
+        <item>Imperial (mi)</item>
+    </array>
+</resources>

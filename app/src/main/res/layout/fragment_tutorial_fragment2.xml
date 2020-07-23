@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tutorial2"
+    tools:context=".OnBoardingScreens.TutorialFragment2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="130dp"
+        android:layout_marginHorizontal="40dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Browse"
+            android:fontFamily="@font/radomir_tinkov_gilroy_black"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lorem ipsum is a dummy text of type facing, lorem ipsum is a dummy text of type facing, and dummy text"
+            android:fontFamily="@font/radomir_tinkov_gilroy_medium"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textAllCaps="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="44dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/radomir_tinkov_gilroy_regular"
+        android:textColor="@color/white"
+        android:id="@+id/skip"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MyActivities.MeditationActivity">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/push_bg" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_back_light"
+                android:id="@+id/btn_back"
+                android:onClick="BackClick"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="Meditation"
+                android:textColor="@android:color/white"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_gravity="center"
+                android:fontFamily="@font/radomir_tinkov_gilroy_black"
+                />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_favorite"
+                android:layout_gravity="end"
+                android:layout_marginRight="16dp"
+                android:id="@+id/btn_favorite"
+                android:onClick="BackClick"
+                android:visibility="gone"
+                />
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_play"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn_play"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_pause"
+        android:layout_centerInParent="true"
+        android:id="@+id/btn_pause"
+        android:visibility="gone"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:background="#94000000"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Concentration Exercise"
+            android:textColor="@android:color/white"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:id="@+id/txt_med_title"
+            android:fontFamily="@font/radomir_tinkov_gilroy_black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:id="@+id/txt_med_description"
+            android:fontFamily="@font/radomir_tinkov_gilroy_medium"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_black"
+    tools:context=".MyActivities.SettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_back_light"
+                android:onClick="BackClick" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/radomir_tinkov_gilroy_black"
+                android:text="Settings"
+                android:textColor="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/btn_favorite"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_favorite"
+                android:visibility="gone"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/fit_body_round_box"
+        android:text="Profile"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:gravity="start|center"
+        android:paddingLeft="24dp"
+        android:onClick="ProfileClick"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/fit_body_round_box"
+        android:gravity="start|center"
+        android:text="Privacy Policy"
+        android:textColor="@color/white"
+        android:paddingLeft="24dp"
+        android:textAllCaps="false"
+        android:onClick="PrivacyPolicyClick"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/fit_body_round_box"
+        android:gravity="start|center"
+        android:text="Logout"
+        android:textColor="@color/fontcolorr"
+        android:paddingLeft="24dp"
+        android:textAllCaps="false"
+        android:onClick="LogoutClick"
+        />
+
+
+</LinearLayout>

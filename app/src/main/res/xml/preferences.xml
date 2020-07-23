@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/Data">
+        <Preference
+            android:key="Licno"
+            android:summary="@string/Change_your_personal_data"
+            android:title="@string/User_data">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.zeopoxa.fitness.running.ChangeData"
+                android:targetPackage="com.zeopoxa.fitness.running" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Screen">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="screenOn"
+            android:summary="@string/keep_screen_on"
+            android:title="@string/keep_screen_on_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Map">
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/mapType"
+            android:entryValues="@array/mapTypeValues"
+            android:key="mapType"
+            android:summary="@string/map_type"
+            android:title="@string/map_type_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Date_format">
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/dateFormat"
+            android:entryValues="@array/dateFormatValues"
+            android:key="dateFormat"
+            android:summary="@string/dateText"
+            android:title="@string/dateTitle" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Daily_goal">
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+            android:key="rastojanjeCilj"
+            android:summary="@string/Set_the_distance_goal"
+            android:title="@string/Daily_goal_distance" />
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+            android:key="kalorijeCilj"
+            android:summary="@string/Set_the_calories_goal"
+            android:title="@string/Daily_goal_calories" />
+        <EditTextPreference
+            android:defaultValue="0"
+            android:inputType="number|numberSigned|numberDecimal|numberPassword|phone"
+            android:key="vremeCilj"
+            android:summary="@string/Set_the_time_goal"
+            android:title="@string/Daily_goal_time_min" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="obavestenje"
+            android:summary="@string/Get_sound_notification"
+            android:title="@string/Notification" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Units">
+        <ListPreference
+            android:defaultValue="@string/units_default"
+            android:entries="@array/units"
+            android:entryValues="@array/unitValues"
+            android:key="jedinica_mere"
+            android:summary="@string/Choose_unit"
+            android:title="@string/Units" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/Voice_notification">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="isVoiceOn"
+            android:summary="@string/Voice_notification_summ"
+            android:title="@string/Voice_notification" />
+        <PreferenceScreen
+            android:dependency="isVoiceOn"
+            android:key="Speak_option"
+            android:summary="@string/what_should_be_read_out"
+            android:title="@string/Speak_option">
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="isVoiceKilometerOn"
+                android:summary="@string/Notification_distance_summ"
+                android:title="@string/Distance" />
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="isVoiceSpeedOn"
+                android:summary="@string/Notification_speed_summ"
+                android:title="@string/Speed" />
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="isVoicePaceOn"
+                android:summary="@string/Notification_pace_summ"
+                android:title="@string/Pace" />
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="isVoiceTimeOn"
+                android:summary="@string/Notification_time_summ"
+                android:title="@string/Time" />
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="isVoiceCaloriesOn"
+                android:summary="@string/Notification_calories_summ"
+                android:title="@string/Calories" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/AutoPause">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="autoPause"
+            android:summary="@string/auto_pause_summ"
+            android:title="@string/auto_pause_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/About">
+        <PreferenceScreen
+            android:key="about"
+            android:title="@string/About">
+            <Preference
+                android:key="version"
+                android:summary="@string/Version" />
+            <Preference
+                android:key="vebsite"
+                android:title="@string/Visit_web_site">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="http://www.zeopoxa.com" />
+            </Preference>
+            <Preference
+                android:key="facebook"
+                android:title="@string/Visit_facebook">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://www.facebook.com/Zeopoxa-564911257006927/" />
+            </Preference>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>
