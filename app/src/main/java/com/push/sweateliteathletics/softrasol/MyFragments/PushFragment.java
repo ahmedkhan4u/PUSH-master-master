@@ -126,8 +126,6 @@ public class PushFragment extends Fragment {
 
         //getFitMindGoal();
         //getFitBodyGoal();
-
-        getFavoritesData();
         showMindCoundDownTimer();
         showBodyCountDownTimer();
 
@@ -459,13 +457,13 @@ public class PushFragment extends Fragment {
 
                         if (list.isEmpty()){
                             list.add(new FavoritesModel("videos",
-                                    "", "No Data Found"));
+                                    "", "Add Favorite"));
 
                             list.add(new FavoritesModel("videos",
-                                    "", "No Data Found"));
+                                    "", "Add Favorite"));
 
                             list.add(new FavoritesModel("videos",
-                                    "", "No Data Found"));
+                                    "", "Add Favorite"));
 
                             implementRecyclerView();
 
@@ -475,10 +473,10 @@ public class PushFragment extends Fragment {
 
 
                             list.add(new FavoritesModel("videos",
-                                    "", "No Data Found"));
+                                    "", "Add Favorite"));
 
                             list.add(new FavoritesModel("videos",
-                                    "", "No Data Found"));
+                                    "", "Add Favorite"));
                             implementRecyclerView();
 
                         }
@@ -487,7 +485,7 @@ public class PushFragment extends Fragment {
 
 
                             list.add(new FavoritesModel("videos",
-                                    "", "No Data Found"));
+                                    "", "Add Favorite"));
 
                             implementRecyclerView();
 
@@ -630,8 +628,10 @@ public class PushFragment extends Fragment {
 
     public void onResume() {
         super.onResume();
-//        this.units = this.qasa2.getString("units", "Metric");
-//        showData();
+        this.units = this.qasa2.getString("units", "Metric");
+        showData();
+        getFavoritesData();
+
     }
 
 

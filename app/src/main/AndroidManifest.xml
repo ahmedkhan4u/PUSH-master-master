@@ -40,6 +40,8 @@
         <activity android:name=".MyActivities.NameSettingActivity" />
         <activity android:name=".OnBoardingScreens.OnBoardingActivity"/>
         <activity android:name=".MyActivities.NutritionActivity"/>
+        <activity android:name=".MyActivities.SettingsActivity"/>
+
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -291,8 +291,7 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
                 if (this.mMapRep != null)
                 {
                     //this.mMapRep.snapshot(this.callback);
-                    QuoreReport.this.shareImage(QuoreReport.this.takeScreenShot
-                            (QuoreReport.this.linLay1));
+                    QuoreReport.this.shareImage(QuoreReport.this.takeScreenShot(QuoreReport.this.linLay1));
                     break;
                 }
                 break;

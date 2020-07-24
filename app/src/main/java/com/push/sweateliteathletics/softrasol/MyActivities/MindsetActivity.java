@@ -5,6 +5,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -74,6 +76,12 @@ public class MindsetActivity extends AppCompatActivity {
 
     }
 
+    private void heartAnimation() {
+        Animation anim = AnimationUtils.loadAnimation
+                (getApplicationContext(), R.anim.heart_animation);
+        mBtnFavourite.startAnimation(anim);
+    }
+
     private void checkIfAddedToFavoriteOrNot() {
 
         documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -82,6 +90,7 @@ public class MindsetActivity extends AppCompatActivity {
                 if (task.isSuccessful()){
                     if (task.getResult().exists()){
                         mBtnFavourite.setBackgroundResource(R.drawable.ic_favorite_red);
+                        heartAnimation();
                     }
                 }
             }
@@ -108,6 +117,7 @@ public class MindsetActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()){
                                                 mBtnFavourite.setBackgroundResource(R.drawable.ic_favorite);
+                                                heartAnimation();
                                             }
                                         }
                                     });
@@ -124,6 +134,7 @@ public class MindsetActivity extends AppCompatActivity {
                                                     public void onComplete(@NonNull Task<Void> task) {
                                                         if (task.isSuccessful()){
                                                             mBtnFavourite.setBackgroundResource(R.drawable.ic_favorite);
+                                                            heartAnimation();
                                                             Toast.makeText(getApplicationContext(), "Removed from favorites", Toast.LENGTH_SHORT).show();
                                                         }else {
                                                             Toast.makeText(getApplicationContext(),
@@ -143,6 +154,7 @@ public class MindsetActivity extends AppCompatActivity {
                                                     public void onComplete(@NonNull Task task) {
                                                         if (task.isSuccessful()){
                                                             mBtnFavourite.setBackgroundResource(R.drawable.ic_favorite_red);
+                                                            heartAnimation();
                                                             Toast.makeText(getApplicationContext(), "Added to favourites", Toast.LENGTH_SHORT).show();
                                                         }else {
                                                             Toast.makeText(getApplicationContext(),

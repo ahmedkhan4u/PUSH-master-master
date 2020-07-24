@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -43,15 +44,15 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
 
 
         if (model.getCategory().equalsIgnoreCase("wise")){
-            holder.mBackground.setBackgroundResource(R.drawable.img_wise);
+            holder.imageView.setImageResource(R.drawable.meditation_wise);
         }
 
         if (model.getCategory().equalsIgnoreCase("Happiness")){
-            holder.mBackground.setBackgroundResource(R.drawable.img_happiness);
+            holder.imageView.setImageResource(R.drawable.meditation_happiness);
         }
 
         if (model.getCategory().equalsIgnoreCase("health")){
-            holder.mBackground.setBackgroundResource(R.drawable.img_health);
+            holder.imageView.setImageResource(R.drawable.meditation_health);
         }
 
         
@@ -80,6 +81,7 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private TextView mTxtTitle, mTxtBody;
+        private ImageView imageView;
         public RelativeLayout mBackground;
 
         public ViewHolder(@NonNull View itemView) {
@@ -88,6 +90,7 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
             mTxtTitle = itemView.findViewById(R.id.txt_title_body_list);
             mTxtBody = itemView.findViewById(R.id.txt_subtitle_body_list);
             mBackground = itemView.findViewById(R.id.meditatoin_bg);
+            imageView = itemView.findViewById(R.id.img_programs);
         }
     }
 }

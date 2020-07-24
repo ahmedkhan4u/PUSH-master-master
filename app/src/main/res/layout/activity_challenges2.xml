@@ -38,7 +38,7 @@
                 android:text="Challenges"
                 android:textColor="@android:color/white" />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/btn_favorite"
                 android:layout_width="24dp"
                 android:layout_height="24dp"

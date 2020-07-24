@@ -51,7 +51,7 @@
                     android:fontFamily="@font/radomir_tinkov_gilroy_black"
                     />
 
-                <ImageButton
+                <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:background="@drawable/ic_favorite"
