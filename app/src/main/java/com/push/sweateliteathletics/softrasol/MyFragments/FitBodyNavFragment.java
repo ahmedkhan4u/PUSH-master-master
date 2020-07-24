@@ -74,6 +74,8 @@ public class FitBodyNavFragment extends Fragment {
             mPrograms, mMyPush;
     private AlertDialog alert11;
 
+    TextView mTxtTitle, mTxtDescription;
+
     private String goal;
 
     //Date Dialog
@@ -99,9 +101,34 @@ public class FitBodyNavFragment extends Fragment {
         programsClick();
         myPushClick();
         nutritionCLick();
+        getHomeScreenData();
 
         return mView;
     }
+
+    private void getHomeScreenData() {
+
+        CollectionReference collectionReference = FirebaseFirestore.getInstance()
+                .collection("fitbody");
+        DocumentReference documentReference = collectionReference
+                .document("home_screen_details");
+
+        documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()){
+                    if (task.getResult().exists()){
+                        mTxtTitle.setText(task.getResult().getString("title"));
+                        mTxtDescription.setText(task.getResult().getString("description"));
+                    }
+                }
+            }
+        });
+
+
+
+    }
+
 
     private void nutritionCLick() {
         mNutririon.setOnClickListener(new View.OnClickListener() {
@@ -323,6 +350,9 @@ public class FitBodyNavFragment extends Fragment {
         mChallenges = mView.findViewById(R.id.fitbody_challenges);
         mPrograms = mView.findViewById(R.id.fitbody_programs);
         mMyPush = mView.findViewById(R.id.fitbody_mypush);
+
+        mTxtTitle = mView.findViewById(R.id.title);
+        mTxtDescription = mView.findViewById(R.id.description);
 
     }
 

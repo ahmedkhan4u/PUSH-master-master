@@ -329,4 +329,11 @@ public class SignUp extends AppCompatActivity {
             loginButton.performClick();
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getApplicationContext(), SignIn.class));
+        finish();
+    }
 }

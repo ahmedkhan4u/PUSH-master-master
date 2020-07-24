@@ -81,6 +81,8 @@ public class FitMindNavFragment extends Fragment {
     private RelativeLayout mBreathWork, mMindset, mMeditation, mMotivation, mPrograms
             , mMyPush;
 
+    private TextView mTxtTitle, mTxtDescription;
+
     private String mtxtGoal;
     private String mChoosedDay;
 
@@ -112,7 +114,7 @@ public class FitMindNavFragment extends Fragment {
         motivationClick();
         programsClick();
         myPushClick();
-
+        getHomeScreenDetails();
         return mView;
     }
 
@@ -343,6 +345,9 @@ public class FitMindNavFragment extends Fragment {
         mMotivation = mView.findViewById(R.id.fitmind_motivation);
         mPrograms = mView.findViewById(R.id.fitmind_programs);
         mMyPush = mView.findViewById(R.id.fitmind_mypush);
+
+        mTxtTitle = mView.findViewById(R.id.title);
+        mTxtDescription = mView.findViewById(R.id.description);
     }
 
 
@@ -409,6 +414,26 @@ public class FitMindNavFragment extends Fragment {
             }
         }
         return false;
+    }
+
+    private void getHomeScreenDetails() {
+
+        CollectionReference collectionReference = FirebaseFirestore.getInstance()
+                .collection("fitmind");
+        DocumentReference documentReference = collectionReference
+                .document("home_screen_details");
+
+        documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()){
+                    if (task.getResult().exists()){
+                        mTxtTitle.setText(task.getResult().getString("title"));
+                        mTxtDescription.setText(task.getResult().getString("description"));
+                    }
+                }
+            }
+        });
     }
 
 }

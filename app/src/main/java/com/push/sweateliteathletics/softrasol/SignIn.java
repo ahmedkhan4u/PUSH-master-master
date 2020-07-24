@@ -327,10 +327,4 @@ public class SignIn extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startActivity(new Intent(getApplicationContext(), SignUp.class));
-        finish();
-    }
 }
