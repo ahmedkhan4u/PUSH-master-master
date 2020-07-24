@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PUSH-master-master.iml" filepath="$PROJECT_DIR$/PUSH-master-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PUSH-master-master-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PUSH-master-master-app.iml" group="PUSH-master-master/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/edited-PUSH-master-master.iml" filepath="$PROJECT_DIR$/.idea/modules/edited-PUSH-master-master.iml" group="PUSH-master-master" />
     </modules>
   </component>
 </project>

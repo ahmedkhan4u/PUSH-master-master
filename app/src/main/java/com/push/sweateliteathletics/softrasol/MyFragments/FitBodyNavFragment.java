@@ -121,14 +121,14 @@ public class FitBodyNavFragment extends Fragment {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
 
                 final String time = sharedPreferences.getString("time", "");
-                String goal = sharedPreferences.getString("goal", "");
-                String date = sharedPreferences.getString("date", "");
+                final String goal = sharedPreferences.getString("goal", "");
+                final String date = sharedPreferences.getString("date", "");
 
                 if (!sharedPreferences.contains("time")) {
                     Log.d("dxdiag", "Share Preg Not Exists " + time);
-                    showAlertDialog();
+                    showAlertDialog("", "");
                 } else if (time.equals("") || time.equals("0") || Long.parseLong(time) < 0) {
-                    showAlertDialog();
+                    showAlertDialog("", "");
                     Log.d("dxdiag", "Time Up" + time);
                 } else {
                     Log.d("dxdiag", " Data Exista " + time);
@@ -143,7 +143,15 @@ public class FitBodyNavFragment extends Fragment {
                     builder1.setCancelable(true);
 
                     builder1.setPositiveButton(
-                            "OK",
+                            "Update",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    showAlertDialog(goal, date);
+                                }
+                            });
+
+                    builder1.setNegativeButton(
+                            "Close",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     dialog.cancel();
@@ -163,7 +171,14 @@ public class FitBodyNavFragment extends Fragment {
 
 
 
-    private void showAlertDialog() {
+    private void showAlertDialog(String pGoal, final String pDate) {
+
+        boolean forEdit = false;
+
+        if (!pGoal.equals("") && !pDate.equals("")) {
+            forEdit = true;
+        }
+
         AlertDialog.Builder builder1 = new AlertDialog.Builder(getActivity());
         builder1.setCancelable(true);
         View myView = LayoutInflater.from(getActivity())
@@ -173,17 +188,25 @@ public class FitBodyNavFragment extends Fragment {
 
         final EditText mEdtGoal = myView.findViewById(R.id.edt_dialog_fitmind_goal);
         final TextView mTxtDate = myView.findViewById(R.id.txt_dialog_fitmind_goal_date);
+        final TextView mTxtHeader = myView.findViewById(R.id.txt_dialog_header);
+
+        mEdtGoal.setText(pGoal);
+        mTxtDate.setText(pDate);
 
         mTxtDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                datePicker(mTxtDate);
+                datePicker(mTxtDate, pDate);
             }
         });
 
         Button mBtnCancel = myView.findViewById(R.id.btn_cancel_dialog_fitmind);
         Button mBtnSubmit = myView.findViewById(R.id.btn_submit_dialog_fitmind);
 
+        if (forEdit) {
+            mBtnSubmit.setText("Edit");
+            mTxtHeader.setText("Edit Push Goal");
+        }
 
         mBtnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -303,13 +326,22 @@ public class FitBodyNavFragment extends Fragment {
 
     }
 
-    private void datePicker(final TextView mTxtDate) {
+    private void datePicker(final TextView mTxtDate, String prevSelectedDate) {
 
         // Get Current Date
         final Calendar c = Calendar.getInstance();
-        mYear = c.get(Calendar.YEAR);
-        mMonth = c.get(Calendar.MONTH);
-        mDay = c.get(Calendar.DAY_OF_MONTH);
+        if (!prevSelectedDate.equals("")) {
+            Log.e("hi5", prevSelectedDate);
+            String[] dateArr = prevSelectedDate.split("/");
+            mYear = Integer.parseInt(dateArr[0]);
+            mMonth = Integer.parseInt(dateArr[1]) - 1;
+            mDay = Integer.parseInt(dateArr[2]);
+        } else {
+            Log.e("hi5", prevSelectedDate);
+            mYear = c.get(Calendar.YEAR);
+            mMonth = c.get(Calendar.MONTH);
+            mDay = c.get(Calendar.DAY_OF_MONTH);
+        }
 
 
 
