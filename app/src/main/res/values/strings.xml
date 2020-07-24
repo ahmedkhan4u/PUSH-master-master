@@ -184,7 +184,7 @@
     <string name="giveFeedbackText">Would you mind giving us some feedback?</string>
     <string name="giveFeedbackTitle">Feedback</string>
     <string name="h">h</string>
-    <string name="hhmm">hh:mm</string>
+    <string name="hhmm">mm:ss</string>
     <string name="history">History</string>
     <string name="incorrect_year_of_birth">You have not entered correct year of birth</string>
     <string name="intervalType">Interval type</string>
