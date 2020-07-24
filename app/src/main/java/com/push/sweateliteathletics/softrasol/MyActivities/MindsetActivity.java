@@ -47,7 +47,7 @@ public class MindsetActivity extends AppCompatActivity {
     private Dialog dialog;
     private ImageView bgImage;
 
-    private ImageButton mBtnFavourite;
+    private ImageView mBtnFavourite;
     CollectionReference collectionReference;
     DocumentReference documentReference;
 
