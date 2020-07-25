@@ -290,7 +290,7 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
             case R.id.share_report /*2131231080*/:
                 if (this.mMapRep != null)
                 {
-                    this.mMapRep.snapshot((SnapshotReadyCallback) QuoreReport.this);
+                    this.mMapRep.snapshot(this.callback);
                     //QuoreReport.this.shareImage(QuoreReport.this.takeScreenShot(QuoreReport.this.linearLayout));
                     break;
                 }
