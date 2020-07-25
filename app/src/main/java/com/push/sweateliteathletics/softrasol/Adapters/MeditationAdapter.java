@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +23,7 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
 
     private Context context;
     private List<MeditationModel> list;
+    public static String title, description, audio, image;
 
     public MeditationAdapter(Context context, List<MeditationModel> list) {
         this.context = context;
@@ -55,18 +57,23 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
             holder.imageView.setImageResource(R.drawable.meditation_health);
         }
 
-        
 
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                title = model.getTitle();
+                description = model.getDescription();
+                audio = model.getAudio_url();
+                image = model.getImage_url();
+
                 Intent intent = new Intent(context, MeditationActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("title", model.getTitle());
-                intent.putExtra("description", model.getDescription());
-                intent.putExtra("audio", model.getAudio_url());
-                intent.putExtra("image", model.getImage_url());
+//                intent.putExtra("title", title);
+//                intent.putExtra("description", description);
+//                intent.putExtra("audio",audio);
+//                intent.putExtra("image", image);
                 context.startActivity(intent);
             }
         });

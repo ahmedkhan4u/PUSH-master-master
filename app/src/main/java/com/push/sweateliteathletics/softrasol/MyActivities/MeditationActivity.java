@@ -1,5 +1,7 @@
 package com.push.sweateliteathletics.softrasol.MyActivities;
 
+import android.app.Dialog;
+import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -7,12 +9,16 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.push.sweateliteathletics.softrasol.Adapters.MeditationAdapter;
+import com.push.sweateliteathletics.softrasol.Helper.MediaPlayerHelper;
 import com.push.sweateliteathletics.softrasol.R;
 import com.squareup.picasso.Picasso;
 
@@ -25,9 +31,9 @@ public class MeditationActivity extends AppCompatActivity {
     private TextView mTxtTite, mTxtDescription;
     private boolean status = false;
 
+    private Dialog dialog;
 
-
-    private MediaPlayer mediaPlayer;
+    //private MediaPlayer mediaPlayer;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -36,12 +42,41 @@ public class MeditationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_meditation);
         getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(), R.color.black));//
 
-        mediaPlayer = new MediaPlayer();
+        //mediaPlayer = new MediaPlayer();
 
         widgetsInitialization();
         getIntentData();
         btnPlayClick();
         btnPauseClick();
+
+        if (MediaPlayerHelper.mediaPlayer.isPlaying()){
+            MediaPlayerHelper.mediaPlayer.stop();
+            MediaPlayerHelper.mediaPlayer.reset();
+
+            MediaPlayerHelper.mediaPlayer = new MediaPlayer();
+        }
+
+        showProgressBar();
+
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                if (MeditationAdapter.audio != null){
+                    try {
+                        MediaPlayerHelper.mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                        MediaPlayerHelper.mediaPlayer = new MediaPlayer();
+                        MediaPlayerHelper.mediaPlayer.setDataSource(MeditationActivity.this, Uri.parse(MeditationAdapter.audio));
+                        MediaPlayerHelper.mediaPlayer.prepare();
+                        dialog.cancel();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        dialog.cancel();
+                    }
+
+                }
+            }
+        }).start();
 
     }
 
@@ -49,9 +84,13 @@ public class MeditationActivity extends AppCompatActivity {
         mBtnPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mediaPlayer.pause();
-                mBtnPause.setVisibility(View.GONE);
-                mBtnPlay.setVisibility(View.VISIBLE);
+                try {
+                    MediaPlayerHelper.mediaPlayer.pause();
+                    mBtnPause.setVisibility(View.GONE);
+                    mBtnPlay.setVisibility(View.VISIBLE);
+                }catch (Exception ex){
+
+                }
             }
         });
     }
@@ -60,7 +99,7 @@ public class MeditationActivity extends AppCompatActivity {
         mBtnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mediaPlayer.start();
+                MediaPlayerHelper.mediaPlayer.start();
                 mBtnPlay.setVisibility(View.GONE);
                 mBtnPause.setVisibility(View.VISIBLE);
             }
@@ -82,27 +121,16 @@ public class MeditationActivity extends AppCompatActivity {
 
     private void getIntentData() {
 
-        title = getIntent().getStringExtra("title");
-        description = getIntent().getStringExtra("description");
-        audio = getIntent().getStringExtra("audio");
-        image = getIntent().getStringExtra("image");
+//        title = getIntent().getStringExtra("title");
+//        description = getIntent().getStringExtra("description");
+//        audio = getIntent().getStringExtra("audio");
+//        image = getIntent().getStringExtra("image");
 
-        mTxtTite.setText(title);
-        mTxtDescription.setText(description);
-        Picasso.get().load(image).placeholder(R.drawable.push_bg).into(bgImage);
 
-        if (audio != null){
-            mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-            try {
-                mediaPlayer = new MediaPlayer();
-                mediaPlayer.setDataSource(MeditationActivity.this, Uri.parse(audio));
-                mediaPlayer.prepare();
+        mTxtTite.setText(MeditationAdapter.title);
+        mTxtDescription.setText(MeditationAdapter.description);
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
+        Picasso.get().load(MeditationAdapter.image).placeholder(R.drawable.push_bg).into(bgImage);
     }
 
 
@@ -126,6 +154,17 @@ public class MeditationActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         //mediaPlayer.stop();
+    }
+
+    public void showProgressBar(){
+
+        dialog = new Dialog(MeditationActivity.this);
+        dialog.setContentView(R.layout.progress_dialog);
+        ProgressBar progressBar = dialog.findViewById(R.id.progress_bar);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        progressBar.setProgress(100);
+        dialog.setCancelable(false);
+        dialog.show();
     }
 }
 

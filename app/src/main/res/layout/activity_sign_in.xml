@@ -16,8 +16,27 @@
         android:orientation="vertical"
         android:layout_gravity="center"
         android:gravity="center"
-        android:paddingTop="250dp"
+        android:paddingTop="70dp"
         >
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/push_logo"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            android:text="Powered by\nSWEAT ELITE ATHLETICS"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:fontFamily="@font/radomir_tinkov_gilroy_medium"
+            />
 
         <EditText
             android:id="@+id/signin_email"
@@ -128,8 +147,6 @@
             android:text="Don't Have Account? Sign Up"
             android:textSize="16sp"
             />
-
-
 
     </LinearLayout>
 

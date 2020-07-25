@@ -54,25 +54,25 @@ import java.util.Locale;
 
 public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback {
     private double avgSpeed = 0.0d;
-    final SnapshotReadyCallback callback = new SnapshotReadyCallback() {
-        public void onSnapshotReady(Bitmap snapshot) {
-            Intent a = new Intent(QuoreReport.this, QuoreShare.class);
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            snapshot.compress(CompressFormat.PNG, 100, stream);
-            a.putExtra("Bitmap", stream.toByteArray());
-            a.putExtra("units", QuoreReport.this.units);
-            a.putExtra("distance", QuoreReport.this.distance);
-            a.putExtra("duration", QuoreReport.this.duration);
-            a.putExtra("calories", QuoreReport.this.calories);
-            a.putExtra("maxSpeed", QuoreReport.this.maxSpeed);
-            a.putExtra("startTime", QuoreReport.this.startTime);
-            a.putExtra("stopTime", QuoreReport.this.stopTime);
-            a.putExtra("date", QuoreReport.this.date);
-            a.putExtra("pace", String.format(Locale.US, "%.2f", new Object[]{Double.valueOf(QuoreReport.this.pace)}));
-            a.putExtra("avgSpeed", String.format(Locale.US, "%.2f", new Object[]{Double.valueOf(QuoreReport.this.avgSpeed)}));
-            QuoreReport.this.startActivity(a);
-        }
-    };
+//    final SnapshotReadyCallback callback = new SnapshotReadyCallback() {
+//        public void onSnapshotReady(Bitmap snapshot) {
+//            Intent a = new Intent(QuoreReport.this, QuoreShare.class);
+//            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+//            snapshot.compress(CompressFormat.PNG, 100, stream);
+//            a.putExtra("Bitmap", stream.toByteArray());
+//            a.putExtra("units", QuoreReport.this.units);
+//            a.putExtra("distance", QuoreReport.this.distance);
+//            a.putExtra("duration", QuoreReport.this.duration);
+//            a.putExtra("calories", QuoreReport.this.calories);
+//            a.putExtra("maxSpeed", QuoreReport.this.maxSpeed);
+//            a.putExtra("startTime", QuoreReport.this.startTime);
+//            a.putExtra("stopTime", QuoreReport.this.stopTime);
+//            a.putExtra("date", QuoreReport.this.date);
+//            a.putExtra("pace", String.format(Locale.US, "%.2f", new Object[]{Double.valueOf(QuoreReport.this.pace)}));
+//            a.putExtra("avgSpeed", String.format(Locale.US, "%.2f", new Object[]{Double.valueOf(QuoreReport.this.avgSpeed)}));
+//            QuoreReport.this.startActivity(a);
+//        }
+//    };
     private String calories;
     private String date;
     private String distance;
@@ -290,8 +290,8 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
             case R.id.share_report /*2131231080*/:
                 if (this.mMapRep != null)
                 {
-                    this.mMapRep.snapshot(this.callback);
-                    //QuoreReport.this.shareImage(QuoreReport.this.takeScreenShot(QuoreReport.this.linearLayout));
+                    this.mMapRep.snapshot((SnapshotReadyCallback) QuoreReport.this);
+                    QuoreReport.this.shareImage(QuoreReport.this.takeScreenShot(QuoreReport.this.linearLayout));
                     break;
                 }
                 break;

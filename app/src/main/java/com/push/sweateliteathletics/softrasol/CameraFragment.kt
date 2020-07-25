@@ -110,10 +110,10 @@ class CameraFragment : Fragment() {
         imageView = v.findViewById(R.id.overly_view)
         var param: OverlayLayout.LayoutParams = OverlayLayout.LayoutParams(175, 100)
         param.gravity = Gravity.RIGHT
-        param.setMargins(0, 40, 40, 0);
+        param.setMargins(0, 150, 50, 0);
         if(camera?.parent != null)
         {
-            camera?.removeView(imageView);
+            camera?.removeView(imageView)
         }
         camera?.addView(imageView,param)
         param.drawOnPreview = true; // draw on preview
