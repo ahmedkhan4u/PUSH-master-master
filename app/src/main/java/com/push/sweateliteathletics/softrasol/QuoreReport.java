@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.SystemClock;
+
 import androidx.core.app.NavUtils;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -22,6 +24,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.RelativeLayout;
@@ -56,21 +59,28 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
     private double avgSpeed = 0.0d;
     final SnapshotReadyCallback callback = new SnapshotReadyCallback() {
         public void onSnapshotReady(Bitmap snapshot) {
-            Intent a = new Intent(QuoreReport.this, QuoreShare.class);
+//            Intent a = new Intent(QuoreReport.this, QuoreShare.class);
+            findViewById(R.id.share_report).setVisibility(View.INVISIBLE);
+            iv_map.setVisibility(View.VISIBLE);
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             snapshot.compress(CompressFormat.PNG, 100, stream);
-            a.putExtra("Bitmap", stream.toByteArray());
-            a.putExtra("units", QuoreReport.this.units);
-            a.putExtra("distance", QuoreReport.this.distance);
-            a.putExtra("duration", QuoreReport.this.duration);
-            a.putExtra("calories", QuoreReport.this.calories);
-            a.putExtra("maxSpeed", QuoreReport.this.maxSpeed);
-            a.putExtra("startTime", QuoreReport.this.startTime);
-            a.putExtra("stopTime", QuoreReport.this.stopTime);
-            a.putExtra("date", QuoreReport.this.date);
-            a.putExtra("pace", String.format(Locale.US, "%.2f", new Object[]{Double.valueOf(QuoreReport.this.pace)}));
-            a.putExtra("avgSpeed", String.format(Locale.US, "%.2f", new Object[]{Double.valueOf(QuoreReport.this.avgSpeed)}));
-            QuoreReport.this.startActivity(a);
+            byte[] byteArray = stream.toByteArray();
+            Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
+            iv_map.setImageBitmap(bitmap);
+                                QuoreReport.this.shareImage(QuoreReport.this.takeScreenShot(QuoreReport.this.linearLayout));
+
+//            a.putExtra("Bitmap", stream.toByteArray());
+//            a.putExtra("units", QuoreReport.this.units);
+//            a.putExtra("distance", QuoreReport.this.distance);
+//            a.putExtra("duration", QuoreReport.this.duration);
+//            a.putExtra("calories", QuoreReport.this.calories);
+//            a.putExtra("maxSpeed", QuoreReport.this.maxSpeed);
+//            a.putExtra("startTime", QuoreReport.this.startTime);
+//            a.putExtra("stopTime", QuoreReport.this.stopTime);
+//            a.putExtra("date", QuoreReport.this.date);
+//            a.putExtra("pace", String.format(Locale.US, "%.2f", new Object[]{Double.valueOf(QuoreReport.this.pace)}));
+//            a.putExtra("avgSpeed", String.format(Locale.US, "%.2f", new Object[]{Double.valueOf(QuoreReport.this.avgSpeed)}));
+//            QuoreReport.this.startActivity(a);
         }
     };
     private String calories;
@@ -92,7 +102,10 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
     private String stopTime;
     private String units;
 
+    private ImageView iv_map;
+
     private LinearLayout linearLayout;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
@@ -105,6 +118,7 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
         //fb_baner(bnnr, QuoreReport.this);
 
 
+        iv_map = findViewById(R.id.iv_map);
         this.linLay1 = (LinearLayout) findViewById(R.id.LayReport1);
         this.relMap = (RelativeLayout) findViewById(R.id.relMap);
         this.imbZoom = (ImageButton) findViewById(R.id.imbZoom);
@@ -279,19 +293,16 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
         return super.onCreateOptionsMenu(menu);
     }
 
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
+    public boolean onOptionsItemSelected(MenuItem item) {
         super.onOptionsItemSelected(item);
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case 16908332:
                 NavUtils.navigateUpFromSameTask(this);
                 break;
             case R.id.share_report /*2131231080*/:
-                if (this.mMapRep != null)
-                {
+                if (this.mMapRep != null) {
                     this.mMapRep.snapshot(this.callback);
-                    //QuoreReport.this.shareImage(QuoreReport.this.takeScreenShot(QuoreReport.this.linearLayout));
+//                    QuoreReport.this.shareImage(QuoreReport.this.takeScreenShot(QuoreReport.this.linearLayout));
                     break;
                 }
                 break;
@@ -312,15 +323,17 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
 
             //File file = new File(path);
             Uri uri = FileProvider.getUriForFile(QuoreReport.this, BuildConfig.APPLICATION_ID + ".provider", file);
-            Log.d("U: " , "Here is the URI " + file);
+            Log.d("U: ", "Here is the URI " + file);
 
             Intent intent = new Intent("android.intent.action.SEND");
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra(Intent.EXTRA_STREAM, uri);
             intent.setType("image/png");
             startActivity(Intent.createChooser(intent, "PUSH image via"));
+            iv_map.setVisibility(View.VISIBLE);
+            findViewById(R.id.share_report).setVisibility(View.VISIBLE);
         } catch (Exception e) {
-            Log.d("Exp: " ,"Uri Exp: " + e.getMessage());
+            Log.d("Exp: ", "Uri Exp: " + e.getMessage());
             //e.printStackTrace();
         }
     }
@@ -332,7 +345,6 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
         v.setDrawingCacheEnabled(false);
         return b;
     }
-
 
 
 //    public void Banner(final RelativeLayout Ad_Layout, final Context context) {
