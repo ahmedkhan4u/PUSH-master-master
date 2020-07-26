@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tutorial3"
+    android:background="@drawable/onboard3"
     tools:context=".OnBoardingScreens.TutorialFragment3">
 
     <LinearLayout
@@ -18,18 +18,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ready, set..."
-            android:fontFamily="@font/radomir_tinkov_gilroy_black"
+            android:text="FIT BODY"
             android:textColor="@color/white"
-            android:textSize="28dp"
+            android:textSize="38dp"
             android:layout_gravity="center"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="lorem ipsum is a dummy text of type facing, lorem ipsum is a dummy text of type facing, and dummy text"
-            android:fontFamily="@font/radomir_tinkov_gilroy_medium"
+            android:text="''Improve your physical wellness through physical exercises, nutrition, mobility, and more''"
+            android:fontFamily="@font/radomir_tinkov_gilroy_regular"
             android:textColor="@color/white"
             android:layout_marginTop="8dp"
             android:textSize="16sp"
@@ -40,18 +39,55 @@
 
     </LinearLayout>
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_height="140dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="24dp"
+        >
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_unfilled_dot"
+            />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_unfilled_dot"
+            android:layout_marginLeft="8dp"
+            />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_filled_dot"
+            android:layout_marginLeft="8dp"
+            />
+
+
+    </LinearLayout>
+
     <Button
         android:layout_width="140dp"
         android:layout_height="38dp"
-        android:text="Get Started"
+        android:text="GET STARTED"
         android:textAllCaps="false"
         android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="40dp"
+        android:layout_marginRight="24dp"
         android:background="@drawable/btn_white_bg"
-        android:fontFamily="@font/radomir_tinkov_gilroy_regular"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/radomir_tinkov_gilroy_medium"
         android:textColor="@color/black"
         android:id="@+id/btn_getStarted"
         />
+</RelativeLayout>
 
 </RelativeLayout>

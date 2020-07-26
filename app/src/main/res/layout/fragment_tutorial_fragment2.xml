@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tutorial2"
+    android:background="@drawable/onboard2"
     tools:context=".OnBoardingScreens.TutorialFragment2">
 
     <LinearLayout
@@ -18,18 +18,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Browse"
-            android:fontFamily="@font/radomir_tinkov_gilroy_black"
+            android:text="Fit MIND"
             android:textColor="@color/white"
-            android:textSize="28dp"
+            android:textSize="38dp"
             android:layout_gravity="center"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="lorem ipsum is a dummy text of type facing, lorem ipsum is a dummy text of type facing, and dummy text"
-            android:fontFamily="@font/radomir_tinkov_gilroy_medium"
+            android:text="''Improve your mental wellness through meditation, mindset, exercises, breathwork and more.''"
+            android:fontFamily="@font/radomir_tinkov_gilroy_regular"
             android:textColor="@color/white"
             android:layout_marginTop="8dp"
             android:textSize="16sp"
@@ -37,21 +36,59 @@
             android:layout_gravity="center"
             />
 
-
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Skip"
-        android:textAllCaps="false"
-        android:layout_alignParentRight="true"
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
-        android:layout_margin="44dp"
-        android:textSize="16sp"
-        android:fontFamily="@font/radomir_tinkov_gilroy_regular"
-        android:textColor="@color/white"
-        android:id="@+id/skip"
-        />
+        android:layout_height="140dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            >
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_unfilled_dot"
+                />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_filled_dot"
+                android:layout_marginLeft="8dp"
+                />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_unfilled_dot"
+                android:layout_marginLeft="8dp"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SKIP"
+            android:textAllCaps="false"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/radomir_tinkov_gilroy_regular"
+            android:textColor="@color/white"
+            android:id="@+id/skip"
+            />
+    </RelativeLayout>
+
 
 </RelativeLayout>

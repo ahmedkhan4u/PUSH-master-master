@@ -39,7 +39,7 @@ public class FitBodyProgramsActivity extends AppCompatActivity {
 
         list.add(new ProgramsModel("TAKE // OFF", "Strength & Conditioning Training Program"
                 , R.drawable.fitbody_takeoff_min));
-        list.add(new ProgramsModel("S.W.E.A.T", "4 weeks workout"
+        list.add(new ProgramsModel("S.W.E.A.T", "6 weeks workout"
                 , R.drawable.fitbody_takeoff_min));
         list.add(new ProgramsModel("BOX", "Boxing Cardio Program"
                 , R.drawable.fitbody_box_min));

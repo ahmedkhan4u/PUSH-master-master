@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/dark_grey"
+    android:background="@drawable/meditation_bg"
     tools:context=".MyActivities.MeditationCategoryActivity">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#39000000"
+        />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -59,6 +71,7 @@
         android:layout_height="wrap_content"
         android:text="Choose Your\nMeditaion"
         android:layout_marginTop="24dp"
+        android:textSize="18sp"
         android:layout_marginLeft="16dp"
         android:textColor="@android:color/white"
         />
@@ -71,3 +84,4 @@
         />
 
 </LinearLayout>
+</RelativeLayout>

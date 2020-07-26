@@ -50,11 +50,11 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
         }
 
         if (model.getCategory().equalsIgnoreCase("Happiness")){
-            holder.imageView.setImageResource(R.drawable.meditation_happiness);
+            holder.imageView.setImageResource(R.drawable.meditation1);
         }
 
         if (model.getCategory().equalsIgnoreCase("health")){
-            holder.imageView.setImageResource(R.drawable.meditation_health);
+            holder.imageView.setImageResource(R.drawable.meditation_happiness);
         }
 
 
