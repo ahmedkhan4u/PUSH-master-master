@@ -49,6 +49,8 @@ public class EditNameActivity extends AppCompatActivity {
         mTxtName = findViewById(R.id.edt_person_name_edit);
         mImgBackground = findViewById(R.id.bg_image);
 
+        mImgBackground.setVisibility(View.GONE);
+
         collectionReference = FirebaseFirestore.getInstance().collection("users");
         documentReference = collectionReference.document(mAuth.getCurrentUser().getUid());
 

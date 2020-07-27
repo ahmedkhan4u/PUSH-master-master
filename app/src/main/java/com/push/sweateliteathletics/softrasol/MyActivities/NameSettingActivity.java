@@ -46,6 +46,8 @@ public class NameSettingActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         mEdtName = findViewById(R.id.edt_person_name);
 
+        mImgBackground.setVisibility(View.GONE);
+
 
         getBackgroundImage();
 

@@ -42,18 +42,18 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final MeditationModel model = list.get(position);
         holder.mTxtTitle.setText(model.getCategory());
-        holder.mTxtBody.setText(model.getTitle());
+        //holder.mTxtBody.setText(model.getTitle());
 
 
-        if (model.getCategory().equalsIgnoreCase("wise")){
+        if (model.getCategory().equalsIgnoreCase("Deep Replenishing Sleep ")){
             holder.imageView.setImageResource(R.drawable.meditation_wise);
         }
 
-        if (model.getCategory().equalsIgnoreCase("Happiness")){
+        if (model.getCategory().equalsIgnoreCase("Meditation to Achieve your Dreams ")){
             holder.imageView.setImageResource(R.drawable.meditation1);
         }
 
-        if (model.getCategory().equalsIgnoreCase("health")){
+        if (model.getCategory().equalsIgnoreCase("Manage Stress ")){
             holder.imageView.setImageResource(R.drawable.meditation_happiness);
         }
 
@@ -96,6 +96,7 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
 
             mTxtTitle = itemView.findViewById(R.id.txt_title_body_list);
             mTxtBody = itemView.findViewById(R.id.txt_subtitle_body_list);
+            mTxtBody.setVisibility(View.GONE);
             mBackground = itemView.findViewById(R.id.meditatoin_bg);
             imageView = itemView.findViewById(R.id.img_programs);
         }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/push_bg"
+    android:background="@color/dark_grey"
     android:orientation="vertical"
     tools:context=".MyActivities.MotivationActivity">
 
@@ -134,7 +134,7 @@
             android:orientation="vertical"
             android:visibility="visible"
             android:padding="16dp"
-            android:background="@drawable/top_bg_dark"
+            android:background="@drawable/top_bg_grey"
             >
 
             <TextView
@@ -145,7 +145,8 @@
                 android:fontFamily="@font/radomir_tinkov_gilroy_black"
                 android:text="Superfood Snacks"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:gravity="center_horizontal" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_points_data"

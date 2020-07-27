@@ -239,8 +239,7 @@ public class MindsetActivity extends AppCompatActivity {
                         mTxtTitle.setText(task.getResult().getString("title"));
                         mTxtDescription.setText(task.getResult().getString("description"));
                         String image = task.getResult().getString("image_url");
-                        Picasso.get().load(image).placeholder(R.drawable.push_bg)
-                                .into(bgImage);
+                        Picasso.get().load(image).into(bgImage);
 
                     }
                 }else {
