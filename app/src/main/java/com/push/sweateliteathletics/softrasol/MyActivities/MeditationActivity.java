@@ -155,7 +155,7 @@ public class MeditationActivity extends AppCompatActivity {
         super.onBackPressed();
         //mediaPlayer.stop();
     }
-
+//
     public void showProgressBar(){
 
         dialog = new Dialog(MeditationActivity.this);
