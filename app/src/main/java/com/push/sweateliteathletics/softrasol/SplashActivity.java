@@ -38,19 +38,21 @@ public class SplashActivity extends AppCompatActivity {
                 if (FirebaseAuth.getInstance().getCurrentUser() != null) {
                     startActivity(new Intent(getApplicationContext(), QuoreMain.class));
                     finish();
-                }
-
-                SharedPreferences sharedPreferences = getSharedPreferences("tutorial", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-
-                if (!sharedPreferences.contains("first_time")){
-                    Intent intent = new Intent(SplashActivity.this, OnBoardingActivity.class);
-                    startActivity(intent);
-                    finish();
                 }else {
-                    startActivity(new Intent(getApplicationContext(), SignIn.class));
-                    finish();
+                    startActivity(new Intent(getApplicationContext(), OnBoardingActivity.class));
                 }
+
+//                SharedPreferences sharedPreferences = getSharedPreferences("tutorial", Context.MODE_PRIVATE);
+//                SharedPreferences.Editor editor = sharedPreferences.edit();
+//
+//                if (!sharedPreferences.contains("first_time")){
+//                    Intent intent = new Intent(SplashActivity.this, OnBoardingActivity.class);
+//                    startActivity(intent);
+//                    finish();
+//                }else {
+//                    startActivity(new Intent(getApplicationContext(), SignIn.class));
+//                    finish();
+//                }
 
 
 

@@ -219,6 +219,8 @@ public class MotivationActivity extends AppCompatActivity {
 
     public void BackClick(View view) {
         onBackPressed();
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+
     }
 
     private void getPointsData() {
@@ -307,4 +309,9 @@ public class MotivationActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+    }
 }

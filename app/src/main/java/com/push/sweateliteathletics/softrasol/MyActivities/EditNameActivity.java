@@ -146,6 +146,11 @@ public class EditNameActivity extends AppCompatActivity {
         AlertDialog alert11 = builder1.create();
         alert11.show();
 
+    }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
     }
 }

@@ -22,6 +22,8 @@ public class SettingsActivity extends AppCompatActivity {
 
     public void BackClick(View view) {
         onBackPressed();
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+
     }
 
     public void ProfileClick(View view) {
@@ -60,5 +62,11 @@ public class SettingsActivity extends AppCompatActivity {
         AlertDialog alert11 = builder1.create();
         alert11.show();
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
     }
 }

@@ -39,15 +39,18 @@ public class TutorialFragment3 extends Fragment {
         btnGetStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPreferences = getActivity().getSharedPreferences
-                        ("tutorial", Context.MODE_PRIVATE);
-
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString("first_time", "false");
-                editor.apply();
 
                 startActivity(new Intent(getActivity(), SignIn.class));
                 getActivity().finish();
+//                SharedPreferences sharedPreferences = getActivity().getSharedPreferences
+//                        ("tutorial", Context.MODE_PRIVATE);
+//
+//                SharedPreferences.Editor editor = sharedPreferences.edit();
+//                editor.putString("first_time", "false");
+//                editor.apply();
+//
+//                startActivity(new Intent(getActivity(), SignIn.class));
+//                getActivity().finish();
             }
         });
 

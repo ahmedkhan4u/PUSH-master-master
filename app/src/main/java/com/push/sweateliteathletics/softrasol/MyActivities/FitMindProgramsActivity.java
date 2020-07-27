@@ -36,6 +36,8 @@ public class FitMindProgramsActivity extends AppCompatActivity {
 
     public void BackClick(View view) {
         onBackPressed();
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+
     }
 
     private void recyclerViewImplementation() {
@@ -53,4 +55,9 @@ public class FitMindProgramsActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+    }
 }

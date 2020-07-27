@@ -292,6 +292,7 @@ public class BreathworkActivity extends AppCompatActivity {
 
     public void BackClick(View view) {
         onBackPressed();
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
     }
 
     public void showProgressBar(){
@@ -303,5 +304,11 @@ public class BreathworkActivity extends AppCompatActivity {
         progressBar.setProgress(100);
         dialog.setCancelable(false);
         dialog.show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
     }
 }

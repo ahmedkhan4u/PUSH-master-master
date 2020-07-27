@@ -25,4 +25,10 @@ public class WebViewAcitivity extends AppCompatActivity {
         web.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
+    }
 }

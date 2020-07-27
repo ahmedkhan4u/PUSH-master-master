@@ -137,6 +137,7 @@ public class MeditationActivity extends AppCompatActivity {
     public void BackClick(View view) {
         onBackPressed();
         //mediaPlayer.stop();
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
     }
 
     @Override
@@ -154,6 +155,7 @@ public class MeditationActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         //mediaPlayer.stop();
+        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
     }
 //
     public void showProgressBar(){
@@ -166,5 +168,6 @@ public class MeditationActivity extends AppCompatActivity {
         dialog.setCancelable(false);
         dialog.show();
     }
+
 }
 
