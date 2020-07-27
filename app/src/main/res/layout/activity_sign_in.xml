@@ -35,8 +35,8 @@
             android:text="Powered by\nSWEAT ELITE ATHLETICS"
             android:textColor="@android:color/white"
             android:textAlignment="center"
-            android:textSize="12sp"
-            android:fontFamily="@font/radomir_tinkov_gilroy_medium"
+            android:textSize="10sp"
+            android:fontFamily="@font/radomir_tinkov_gilroy_regular"
             />
 
         <EditText
