@@ -36,7 +36,7 @@
             android:textColor="@android:color/white"
             android:textAlignment="center"
             android:textSize="10sp"
-            android:fontFamily="@font/radomir_tinkov_gilroy_regular"
+            android:fontFamily="@font/radomir_tinkov_gilroy_light"
             />
 
         <EditText
