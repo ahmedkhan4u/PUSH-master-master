@@ -40,6 +40,7 @@ public class SplashActivity extends AppCompatActivity {
                     finish();
                 }else {
                     startActivity(new Intent(getApplicationContext(), OnBoardingActivity.class));
+                    finish();
                 }
 
 //                SharedPreferences sharedPreferences = getSharedPreferences("tutorial", Context.MODE_PRIVATE);
