@@ -34,7 +34,7 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context)
-                .inflate(R.layout.fit_body_items_list, parent, false);
+                .inflate(R.layout.meditation_items_list, parent, false);
         return new MeditationAdapter.ViewHolder(view);
     }
 
@@ -42,19 +42,19 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final MeditationModel model = list.get(position);
         holder.mTxtTitle.setText(model.getCategory());
-        //holder.mTxtBody.setText(model.getTitle());
+        holder.mTxtBody.setText(model.getTitle());
 
 
-        if (model.getCategory().equalsIgnoreCase("Deep Replenishing Sleep ")){
-            holder.imageView.setImageResource(R.drawable.meditation_wise);
-        }
-
-        if (model.getCategory().equalsIgnoreCase("Meditation to Achieve your Dreams ")){
+        if (position == 0){
             holder.imageView.setImageResource(R.drawable.meditation1);
         }
 
-        if (model.getCategory().equalsIgnoreCase("Manage Stress ")){
+        if (position == 1){
             holder.imageView.setImageResource(R.drawable.meditation_happiness);
+        }
+
+        if (position == 2){
+            holder.imageView.setImageResource(R.drawable.meditation_wise);
         }
 
 
@@ -96,7 +96,6 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
 
             mTxtTitle = itemView.findViewById(R.id.txt_title_body_list);
             mTxtBody = itemView.findViewById(R.id.txt_subtitle_body_list);
-            mTxtBody.setVisibility(View.GONE);
             mBackground = itemView.findViewById(R.id.meditatoin_bg);
             imageView = itemView.findViewById(R.id.img_programs);
         }
