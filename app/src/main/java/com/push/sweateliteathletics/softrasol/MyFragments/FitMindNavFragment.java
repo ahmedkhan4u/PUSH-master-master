@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -18,6 +20,7 @@ import androidx.fragment.app.Fragment;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -96,6 +99,9 @@ public class FitMindNavFragment extends Fragment {
 
     long miliSecsDate;
 
+    int color = 000000;
+
+
 //adfasdf
 
     @Override
@@ -129,6 +135,7 @@ public class FitMindNavFragment extends Fragment {
     }
 
     private void myPushClick() {
+        layoutAnimation(mMyPush);
         mMyPush.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -297,6 +304,8 @@ public class FitMindNavFragment extends Fragment {
                 startActivity(new Intent(getActivity(), FitMindProgramsActivity.class));
             }
         });
+
+        layoutAnimation(mPrograms);
     }
 
     private void motivationClick() {
@@ -306,6 +315,8 @@ public class FitMindNavFragment extends Fragment {
                 startActivity(new Intent(getActivity(), MotivationActivity.class));
             }
         });
+
+        layoutAnimation(mMotivation);
     }
 
     private void meditationClick() {
@@ -317,6 +328,8 @@ public class FitMindNavFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        layoutAnimation(mMeditation);
     }
 
     private void mindSetClick() {
@@ -326,6 +339,8 @@ public class FitMindNavFragment extends Fragment {
                 startActivity(new Intent(getActivity(), MindsetActivity.class));
             }
         });
+
+        layoutAnimation(mMindset);
     }
 
     private void breathWorkClick() {
@@ -335,6 +350,31 @@ public class FitMindNavFragment extends Fragment {
                 startActivity(new Intent(getActivity(), BreathworkActivity.class));
             }
         });
+
+        layoutAnimation(mBreathWork);
+    }
+
+    private void layoutAnimation(RelativeLayout layout) {
+
+        layout.setOnTouchListener(new View.OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        v.getBackground().setColorFilter(Color.parseColor("#272B3A"), PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        v.getBackground().clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+
     }
 
     private void widgetsInitialization() {

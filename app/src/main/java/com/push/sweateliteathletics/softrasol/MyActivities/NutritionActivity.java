@@ -236,10 +236,16 @@ public class NutritionActivity extends AppCompatActivity {
                 if (task.isSuccessful()){
                     if (task.getResult().exists()){
 
-                        mTxtTitle.setText(task.getResult().getString("title"));
-                        mTxtDescription.setText(task.getResult().getString("description"));
-                        String image = task.getResult().getString("image_url");
-                        Picasso.get().load(image).into(bgImage);
+                        try{
+
+                            mTxtTitle.setText(task.getResult().getString("title"));
+                            mTxtDescription.setText(task.getResult().getString("description"));
+                            String image = task.getResult().getString("image_url");
+                            Picasso.get().load(image).into(bgImage);
+
+                        }catch (Exception ex){
+
+                        }
 
                     }
                 }else {

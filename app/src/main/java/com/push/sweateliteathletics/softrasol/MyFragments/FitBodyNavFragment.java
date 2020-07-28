@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -18,6 +20,7 @@ import androidx.fragment.app.Fragment;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -94,7 +97,6 @@ public class FitBodyNavFragment extends Fragment {
         mView = inflater.inflate(R.layout.fragment_fit_body_nav, container, false);
 
         widgetsInitialization();
-        nutritionClick();
         exerciseClick();
         mobilityClick();
         challengesClick();
@@ -137,9 +139,12 @@ public class FitBodyNavFragment extends Fragment {
                 startActivity(new Intent(getActivity(), NutritionActivity.class));
             }
         });
+
+        layoutAnimation(mNutririon);
     }
 
     private void myPushClick() {
+        layoutAnimation(mMyPush);
         mMyPush.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -309,6 +314,8 @@ public class FitBodyNavFragment extends Fragment {
                 startActivity(new Intent(getActivity(), FitBodyProgramsActivity.class));
             }
         });
+
+        layoutAnimation(mPrograms);
     }
 
     private void challengesClick() {
@@ -318,6 +325,7 @@ public class FitBodyNavFragment extends Fragment {
                 startActivity(new Intent(getActivity(), ChallengesActivity.class));
             }
         });
+        layoutAnimation(mChallenges);
     }
 
     private void mobilityClick() {
@@ -327,6 +335,8 @@ public class FitBodyNavFragment extends Fragment {
                 startActivity(new Intent(getActivity(), MobilityActivity.class));
             }
         });
+
+        layoutAnimation(mMobility);
     }
 
     private void exerciseClick() {
@@ -336,10 +346,11 @@ public class FitBodyNavFragment extends Fragment {
                 startActivity(new Intent(getActivity(), ExerciseActivity.class));
             }
         });
+
+        layoutAnimation(mExercise);
     }
 
     private void nutritionClick() {
-
     }
 
     private void widgetsInitialization() {
@@ -409,5 +420,28 @@ public class FitBodyNavFragment extends Fragment {
                     }
                 }, mYear, mMonth, mDay);
         datePickerDialog.show();
+    }
+
+
+    private void layoutAnimation(RelativeLayout layout) {
+
+        layout.setOnTouchListener(new View.OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        v.getBackground().setColorFilter(Color.parseColor("#161618"), PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        v.getBackground().clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
     }
 }

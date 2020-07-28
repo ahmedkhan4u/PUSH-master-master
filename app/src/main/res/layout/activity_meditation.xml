@@ -7,14 +7,12 @@
     android:background="@android:color/black"
     tools:context=".MyActivities.MeditationActivity">
 
-    <ImageButton
-        android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_back_ripple"
-        android:src="@drawable/ic_back_light"
-        android:onClick="BackClick"
-        />
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/push_bg" />
 
     <View
         android:layout_width="match_parent"
@@ -36,8 +34,9 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_back_light"
+                android:background="@drawable/btn_back_ripple"
                 android:id="@+id/btn_back"
+                android:src="@drawable/ic_back_light"
                 android:onClick="BackClick"
                 />
 
