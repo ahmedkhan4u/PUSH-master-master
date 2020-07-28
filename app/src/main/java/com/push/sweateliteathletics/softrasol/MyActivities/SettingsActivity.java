@@ -8,6 +8,7 @@ import android.view.View;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.push.sweateliteathletics.softrasol.R;
 import com.push.sweateliteathletics.softrasol.SignIn;
@@ -46,6 +47,7 @@ public class SettingsActivity extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         FirebaseAuth.getInstance().signOut();
+                        LoginManager.getInstance().logOut();
                         startActivity(new Intent(SettingsActivity.this, SplashActivity.class));
                         finish();
                         dialog.cancel();
