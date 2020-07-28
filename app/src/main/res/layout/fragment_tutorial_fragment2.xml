@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="16dp"
             >
 
             <ImageView
@@ -91,7 +91,7 @@
             android:layout_alignParentRight="true"
             android:textSize="12sp"
             android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="24dp"
             android:fontFamily="@font/radomir_tinkov_gilroy_medium"
             android:textColor="@color/white"
             android:id="@+id/skip"
