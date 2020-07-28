@@ -20,7 +20,7 @@ import com.push.sweateliteathletics.softrasol.SignIn;
  */
 public class TutorialFragment1 extends Fragment {
 
-    TextView txtSkip;
+    TextView txtSkip, txt1Tut;
 
     public TutorialFragment1() {
         // Required empty public constructor
@@ -35,6 +35,9 @@ public class TutorialFragment1 extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_tutorial_fragment1, container, false);
 
         txtSkip = view.findViewById(R.id.skip);
+        txt1Tut = view.findViewById(R.id.tut1_text);
+
+        txt1Tut.setText("\"The body achieves what the mind believes\"");
 
         txtSkip.setOnClickListener(new View.OnClickListener() {
             @Override
