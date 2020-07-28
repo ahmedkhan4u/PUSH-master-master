@@ -25,8 +25,10 @@
                 android:id="@+id/btn_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_back_light"
-                android:onClick="BackClick" />
+                android:background="@drawable/btn_back_ripple"
+                android:src="@drawable/ic_back_light"
+                android:onClick="BackClick"
+                />
 
             <TextView
                 style="@style/TextAppearance.AppCompat.Title"

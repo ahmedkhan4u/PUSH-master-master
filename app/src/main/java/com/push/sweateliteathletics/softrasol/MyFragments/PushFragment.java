@@ -58,6 +58,9 @@ import com.push.sweateliteathletics.softrasol.SignIn;
 import com.push.sweateliteathletics.softrasol.TitileTextView;
 import com.push.sweateliteathletics.softrasol.services.Alarm60min;
 import com.push.sweateliteathletics.softrasol.services.OreoNotification;
+
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -80,7 +83,7 @@ public class PushFragment extends Fragment {
 
     private View rootView;
 
-    private TitileTextView mTxtName;
+    private TextView mTxtName;
     private TextView mTxtDate;
     private String name;
     private Button mBtnMyPrograms, mBtnEdit;

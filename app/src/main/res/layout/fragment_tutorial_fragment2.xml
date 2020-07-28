@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="''Improve your mental wellness \nthrough meditation, mindset, exercises, breathwork and \nmore.''"
+            android:text="Improve your mental wellness \nthrough meditation, mindset, exercises, breathwork and \nmore."
             android:fontFamily="@font/radomir_tinkov_gilroy_medium"
             android:textColor="@color/white"
             android:layout_marginTop="8dp"

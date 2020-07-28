@@ -32,7 +32,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="''Improve your physical wellness through physical \nexercises, nutrition, mobility, and more''"
+            android:text="Improve your physical wellness through physical \nexercises, nutrition, mobility, and more"
             android:fontFamily="@font/radomir_tinkov_gilroy_medium"
             android:textColor="@android:color/white"
             android:layout_marginTop="8dp"

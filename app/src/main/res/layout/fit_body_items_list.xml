@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="140dp"
+    android:layout_height="120dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginHorizontal="32dp"
     android:orientation="vertical"
     android:layout_marginTop="16dp"
     >
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,6 +29,11 @@
             android:id="@+id/img_programs"
             />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/transparent_bg"
+            />
 
 
         <LinearLayout
@@ -52,10 +63,11 @@
                 android:text="4 weeks workout"
                 android:layout_marginTop="4dp"
                 android:textAllCaps="false"
-                android:textColor="#BDBDBD"
-                android:textSize="14sp"
-                android:id="@+id/txt_subtitle_body_list"
+                android:textColor="#DFDFDF"
+                android:textSize="12sp"
+                android:textStyle="bold"
                 android:fontFamily="@font/radomir_tinkov_gilroy_medium"
+                android:id="@+id/txt_subtitle_body_list"
                 />
 
 
@@ -76,3 +88,5 @@
     </RelativeLayout>
 
 </LinearLayout>
+
+</RelativeLayout>
