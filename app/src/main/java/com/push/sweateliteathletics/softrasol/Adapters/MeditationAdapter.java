@@ -2,7 +2,10 @@ package com.push.sweateliteathletics.softrasol.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.os.Build;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -11,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.push.sweateliteathletics.softrasol.Models.MeditationModel;
@@ -39,9 +43,9 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         final MeditationModel model = list.get(position);
-        holder.mTxtTitle.setText(model.getCategory());
+        //holder.mTxtTitle.setText(model.getCategory());
         holder.mTxtBody.setText(model.getTitle());
 
 
@@ -90,6 +94,7 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
         private TextView mTxtTitle, mTxtBody;
         private ImageView imageView;
         public RelativeLayout mBackground;
+        private View v;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -98,6 +103,9 @@ public class MeditationAdapter extends RecyclerView.Adapter<MeditationAdapter.Vi
             mTxtBody = itemView.findViewById(R.id.txt_subtitle_body_list);
             mBackground = itemView.findViewById(R.id.meditatoin_bg);
             imageView = itemView.findViewById(R.id.img_programs);
+            v = itemView.findViewById(R.id.bg1);
+
+
         }
     }
 }
