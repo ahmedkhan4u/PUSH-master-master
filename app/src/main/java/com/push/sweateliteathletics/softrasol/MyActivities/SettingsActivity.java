@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.push.sweateliteathletics.softrasol.R;
 import com.push.sweateliteathletics.softrasol.SignIn;
+import com.push.sweateliteathletics.softrasol.SplashActivity;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -45,7 +46,7 @@ public class SettingsActivity extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         FirebaseAuth.getInstance().signOut();
-                        startActivity(new Intent(SettingsActivity.this, SignIn.class));
+                        startActivity(new Intent(SettingsActivity.this, SplashActivity.class));
                         finish();
                         dialog.cancel();
                     }
