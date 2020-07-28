@@ -4,7 +4,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +15,8 @@ import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.push.sweateliteathletics.softrasol.R;
 import com.push.sweateliteathletics.softrasol.SignIn;
@@ -52,15 +56,18 @@ public class SettingsActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int id) {
                         FirebaseAuth.getInstance().signOut();
                         LoginManager.getInstance().logOut();
-                        GoogleSignIn.getClient(
-                                getApplicationContext(),
-                                new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).build()
-                        ).signOut();
+                        sendToLogin();
+//                        GoogleSignIn.getClient(
+//                                getApplicationContext(),
+//                                new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).build()
+//                        ).signOut();
 
-                        Intent intent = new Intent(SettingsActivity.this, SplashActivity.class);
-                        //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent);
+                        Intent setupIntent = new Intent(getBaseContext(), SplashActivity.class);
+                        Toast.makeText(getBaseContext(), "Logged Out", Toast.LENGTH_LONG).show(); //if u want to show some text
+                        setupIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(setupIntent);
                         finish();
+
                         dialog.cancel();
                     }
                 });
@@ -83,4 +90,22 @@ public class SettingsActivity extends AppCompatActivity {
         super.onBackPressed();
         overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
     }
+
+    private void sendToLogin() { //funtion
+        GoogleSignInClient mGoogleSignInClient ;
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(getBaseContext(), gso);
+        mGoogleSignInClient.signOut().addOnCompleteListener(SettingsActivity.this,
+                new OnCompleteListener<Void>() {  //signout Google
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        FirebaseAuth.getInstance().signOut(); //signout firebase
+
+                    }
+                });
+    }
+
 }
