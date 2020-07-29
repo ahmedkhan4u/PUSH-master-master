@@ -172,7 +172,7 @@ public class BreathworkActivity extends AppCompatActivity {
                                                 Map map = new HashMap();
                                                 map.put("collection_name", "videos");
                                                 map.put("document_name", "breath_work");
-                                                map.put("name", "Breath Work");
+                                                map.put("name", "Breathwork");
 
                                                 documentReference.set(map).addOnCompleteListener(new OnCompleteListener() {
                                                     @Override
