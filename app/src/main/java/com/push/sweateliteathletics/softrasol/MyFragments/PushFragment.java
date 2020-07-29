@@ -22,6 +22,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -368,8 +369,6 @@ public class PushFragment extends Fragment {
         }
     }
 
-
-
     public static void sendNotification(Context context, String notificationTitle, String notificationBody) {
 
         Random random1 = new Random();
@@ -394,7 +393,6 @@ public class PushFragment extends Fragment {
         noti.notify(num, builder.build());
     }
 
-
     public static void sendOreoNotification(Context context, String notificationTitle, String notificationBody) {
 
         Random random1 = new Random();
@@ -415,11 +413,6 @@ public class PushFragment extends Fragment {
         oreoNotification.getManager().notify(num, builder.build());
 
     }
-
-
-
-
-
 
     @Override
     public void onDestroy() {
@@ -637,7 +630,6 @@ public class PushFragment extends Fragment {
 
     }
 
-
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.main_menu, menu);
@@ -683,5 +675,7 @@ public class PushFragment extends Fragment {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
 
 }

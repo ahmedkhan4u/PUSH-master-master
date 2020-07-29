@@ -65,6 +65,7 @@
         android:gravity="start|center"
         android:paddingLeft="24dp"
         android:onClick="ProfileClick"
+        android:id="@+id/btn_profile"
         />
 
     <Button
@@ -79,6 +80,7 @@
         android:paddingLeft="24dp"
         android:textAllCaps="false"
         android:onClick="PrivacyPolicyClick"
+        android:id="@+id/btn_privacy"
         />
 
     <Button
@@ -93,6 +95,7 @@
         android:paddingLeft="24dp"
         android:textAllCaps="false"
         android:onClick="LogoutClick"
+        android:id="@+id/btn_logout"
         />
 
 

@@ -2,8 +2,13 @@ package com.push.sweateliteathletics.softrasol.MyActivities;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,11 +29,24 @@ import com.push.sweateliteathletics.softrasol.SplashActivity;
 
 public class SettingsActivity extends AppCompatActivity {
 
+    private Button mBtnProfile, mBtnPrivacy, mBtnLogout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settingss_push);
+
+        mBtnProfile = findViewById(R.id.btn_profile);
+        mBtnPrivacy = findViewById(R.id.btn_privacy);
+        mBtnLogout = findViewById(R.id.btn_logout);
+
+        layoutAnimation(mBtnProfile);
+        layoutAnimation(mBtnPrivacy);
+        layoutAnimation(mBtnLogout);
+
+
     }
+
 
     public void BackClick(View view) {
         onBackPressed();
@@ -38,6 +56,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     public void ProfileClick(View view) {
         startActivity(new Intent(getApplicationContext(), EditNameActivity.class));
+
     }
 
     public void PrivacyPolicyClick(View view) {
@@ -106,6 +125,28 @@ public class SettingsActivity extends AppCompatActivity {
 
                     }
                 });
+    }
+
+    private void layoutAnimation(Button layout) {
+
+        layout.setOnTouchListener(new View.OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        v.getBackground().setColorFilter(Color.parseColor("#161618"), PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        v.getBackground().clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
     }
 
 }

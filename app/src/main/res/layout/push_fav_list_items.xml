@@ -5,6 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="4dp"
     android:background="@drawable/fit_body_round_box"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/custom_ripple"
     android:orientation="vertical">
 
     <RelativeLayout
