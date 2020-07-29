@@ -144,9 +144,14 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="42dp"
             android:text="Don't Have Account? Sign Up"
             android:textSize="16sp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/custom_ripple"
+
             />
 
     </LinearLayout>

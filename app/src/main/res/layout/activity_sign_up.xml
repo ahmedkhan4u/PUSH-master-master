@@ -135,9 +135,13 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="42dp"
             android:text="Already Have Account? Sign In"
             android:textSize="16sp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/custom_ripple"
             />
 
     </LinearLayout>
