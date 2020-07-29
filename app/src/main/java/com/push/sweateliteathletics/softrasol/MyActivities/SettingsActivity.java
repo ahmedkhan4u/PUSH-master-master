@@ -73,14 +73,16 @@ public class SettingsActivity extends AppCompatActivity {
                 "Yes",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        FirebaseAuth.getInstance().signOut();
-                        LoginManager.getInstance().logOut();
-                        sendToLogin();
-//                        GoogleSignIn.getClient(
-//                                getApplicationContext(),
-//                                new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).build()
-//                        ).signOut();
 
+                        LoginManager.getInstance().logOut();
+                        FirebaseAuth.getInstance().signOut();
+
+                        GoogleSignIn.getClient(
+                                getApplicationContext(),
+                                new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).build()
+                        ).signOut();
+
+                        //sendToLogin();
                         Intent setupIntent = new Intent(getBaseContext(), SplashActivity.class);
                         Toast.makeText(getBaseContext(), "Logged Out", Toast.LENGTH_LONG).show(); //if u want to show some text
                         setupIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
