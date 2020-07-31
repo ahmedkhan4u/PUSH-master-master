@@ -44,7 +44,7 @@ public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+//
         final FavoritesModel model = list.get(position);
         holder.mTxtFav.setText(model.getName());
 
