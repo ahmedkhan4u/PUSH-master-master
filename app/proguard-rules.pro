@@ -19,7 +19,7 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--repackageclasses com/vocrama/fitness/runningtracker
+-repackageclasses com/push/sweateliteathletics/softrasol
 -dontwarn com.squareup.okhttp.**
 -dontwarn org.apache.http.**
 -dontwarn android.net.http.AndroidHttpClient

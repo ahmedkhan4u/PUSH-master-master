@@ -46,6 +46,8 @@ public class FitBodyProgramsActivity extends AppCompatActivity {
         list.add(new ProgramsModel("MOBILITY", "7 Day Mobility Program"
                 , R.drawable.fitbody_mobility_min));
 
+        list.add(new ProgramsModel("NUTRITION", "Healthy meal plan", R.drawable.fit_body_nutrition_program));
+
         recyclerView .setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         FitBodyProgramsAdapter adapter = new FitBodyProgramsAdapter(FitBodyProgramsActivity.this, list);
         recyclerView.setAdapter(adapter);

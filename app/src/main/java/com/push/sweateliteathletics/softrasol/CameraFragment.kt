@@ -295,10 +295,10 @@ class CameraFragment : Fragment() {
     }
 
     fun showProgressBar() {
-        dialog = Dialog(activity)
+        dialog = activity?.let { Dialog(it) }
         dialog!!.setContentView(R.layout.progress_dialog)
         val progressBar = dialog!!.findViewById<ProgressBar>(R.id.progress_bar)
-        dialog!!.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog!!.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         progressBar.progress = 100
         dialog!!.setCancelable(false)
         dialog!!.show()

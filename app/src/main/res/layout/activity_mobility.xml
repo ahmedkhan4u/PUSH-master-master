@@ -147,7 +147,8 @@
                 android:fontFamily="@font/radomir_tinkov_gilroy_black"
                 android:text="Superfood Snacks"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:gravity="center_horizontal" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_points_data"

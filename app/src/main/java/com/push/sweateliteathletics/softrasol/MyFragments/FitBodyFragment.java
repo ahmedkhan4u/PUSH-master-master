@@ -54,6 +54,7 @@ public class FitBodyFragment extends Fragment {
                 , R.drawable.fitbody_box_min));
         list.add(new ProgramsModel("MOBILITY", "7 Day Mobility Program"
                 , R.drawable.fitbody_mobility_min));
+        list.add(new ProgramsModel("NUTRITION", "Healthy meal plan", R.drawable.fit_body_nutrition_program));
 
         mRecyclerView .setLayoutManager(new LinearLayoutManager(getActivity()));
         FitBodyProgramsAdapter adapter = new FitBodyProgramsAdapter(getActivity(), list);

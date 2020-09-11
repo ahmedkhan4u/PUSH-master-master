@@ -89,7 +89,7 @@ public class SignIn extends AppCompatActivity {
         //AppEventsLogger.activateApp(this);
         loginButton = findViewById(R.id.login_button);
         btnFacebookSignIn = findViewById(R.id.facebook_login);
-        loginButton.setReadPermissions("email", "public_profile", "user_friends");
+        loginButton.setReadPermissions("email", "public_profile");
         mCallbackManager = CallbackManager.Factory.create();
 
         // Callback registration
