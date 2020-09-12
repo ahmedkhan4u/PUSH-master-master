@@ -91,6 +91,7 @@
             android:id="@+id/skip"
             android:focusable="true"
             android:padding="8dp"
+            android:visibility="gone"
             android:clickable="true"
             android:foreground="@drawable/custom_ripple"
             />
