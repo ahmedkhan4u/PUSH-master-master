@@ -279,4 +279,14 @@ public class QuoreAppSettings extends AppCompatActivity {
     private void changeDurationGoal() {
         this.qasa2.edit().putString("goalDuration", String.valueOf(this.etGoalDuration.getText())).apply();
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if (isScreenOn == true){
+            screenOnSwitch.setChecked(true);
+        }
+
+    }
 }

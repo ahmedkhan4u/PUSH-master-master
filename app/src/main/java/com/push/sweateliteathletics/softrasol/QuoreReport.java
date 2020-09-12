@@ -249,6 +249,7 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
                 QuoreReport.this.isZoomed = true;
             }
         });
+
     }
 
     public void onMapReady(GoogleMap googleMapRep) {
@@ -263,7 +264,7 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
                 }
             }
             this.mMapRep.addPolyline(line).setZIndex(1.0f);
-            this.mMapRep.setMaxZoomPreference(18.0f);
+            this.mMapRep.setMaxZoomPreference(16.5f);
             this.mMapRep.addCircle(new CircleOptions().center((LatLng) this.latLonArray.get(0)).strokeColor(Color.argb(255, 255, 255, 255)).radius(12.0d).fillColor(-16711936)).setZIndex(2.0f);
             this.mMapRep.addCircle(new CircleOptions().center((LatLng) this.latLonArray.get(this.latLonArray.size() - 1)).radius(12.0d).strokeColor(Color.argb(255, 255, 255, 255)).fillColor(-65536)).setZIndex(3.0f);
             boundsBuilder.include((LatLng) this.latLonArray.get(this.latLonArray.size() - 1));
@@ -277,7 +278,7 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
                         QuoreReport.this.mMapRep.moveCamera(CameraUpdateFactory.newLatLngBounds(latLngBounds, 100));
                     } catch (Exception e) {
                         QuoreReport.this.mMapRep.moveCamera(CameraUpdateFactory.newLatLng((LatLng) QuoreReport.this.latLonArray.get(QuoreReport.this.latLonArray.size() / 2)));
-                        QuoreReport.this.mMapRep.animateCamera(CameraUpdateFactory.zoomTo(15.0f));
+                        QuoreReport.this.mMapRep.animateCamera(CameraUpdateFactory.zoomTo(14.0f));
                     }
                 }
             }.start();
