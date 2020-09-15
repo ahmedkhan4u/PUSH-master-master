@@ -40,10 +40,12 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.SnapshotReadyCallback;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.LatLngBounds.Builder;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -264,9 +266,27 @@ public class QuoreReport extends AppCompatActivity implements OnMapReadyCallback
                 }
             }
             this.mMapRep.addPolyline(line).setZIndex(1.0f);
-            this.mMapRep.setMaxZoomPreference(16.5f);
-            this.mMapRep.addCircle(new CircleOptions().center((LatLng) this.latLonArray.get(0)).strokeColor(Color.argb(255, 255, 255, 255)).radius(12.0d).fillColor(-16711936)).setZIndex(2.0f);
-            this.mMapRep.addCircle(new CircleOptions().center((LatLng) this.latLonArray.get(this.latLonArray.size() - 1)).radius(12.0d).strokeColor(Color.argb(255, 255, 255, 255)).fillColor(-65536)).setZIndex(3.0f);
+            this.mMapRep.setMaxZoomPreference(17f);
+
+
+
+            MarkerOptions markerOptions = new MarkerOptions();
+            markerOptions.position(this.latLonArray.get(0));
+
+            markerOptions.title("Current Position");
+            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_start));
+            mMapRep.addMarker(markerOptions);
+
+            MarkerOptions markerOptions2 = new MarkerOptions();
+            markerOptions2.position(latLonArray.get(this.latLonArray.size() - 1));
+
+            markerOptions2.title("Current Position");
+            markerOptions2.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_finish));
+            mMapRep.addMarker(markerOptions2);
+
+
+            //this.mMapRep.addCircle(new CircleOptions().center((LatLng) this.latLonArray.get(0)).strokeColor(Color.argb(255, 255, 255, 255)).radius(12.0d).fillColor(-16711936)).setZIndex(2.0f);
+            //this.mMapRep.addCircle(new CircleOptions().center((LatLng) this.latLonArray.get(this.latLonArray.size() - 1)).radius(12.0d).strokeColor(Color.argb(255, 255, 255, 255)).fillColor(-65536)).setZIndex(3.0f);
             boundsBuilder.include((LatLng) this.latLonArray.get(this.latLonArray.size() - 1));
             final LatLngBounds latLngBounds = boundsBuilder.build();
             new CountDownTimer(200, 200) {
