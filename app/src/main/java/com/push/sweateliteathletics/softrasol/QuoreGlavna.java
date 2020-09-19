@@ -23,6 +23,7 @@ import android.speech.tts.TextToSpeech;
 import android.speech.tts.TextToSpeech.OnInitListener;
 import android.speech.tts.UtteranceProgressListener;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.core.app.NotificationCompat.Builder;
@@ -31,6 +32,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
@@ -235,6 +237,9 @@ public class QuoreGlavna extends Fragment implements OnInitListener, OnMapReadyC
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.activity_glavna, container, false);
+
+        getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         this.context = getActivity();
         this.mChronometer = (Chronometer) rootView.findViewById(R.id.chronometer1);
         this.btnStart = (Button) rootView.findViewById(R.id.btnStart);
@@ -427,6 +432,9 @@ public class QuoreGlavna extends Fragment implements OnInitListener, OnMapReadyC
     }
 
     public void onDestroy() {
+
+        getActivity().getWindow().clearFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         if (this.tts != null) {
             this.tts.stop();
             this.tts.shutdown();
